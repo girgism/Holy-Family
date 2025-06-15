@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinai Peninsula - Holy Family Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B4513",
+              secondary: "#D2691E",
+              accent: "#CD853F",
+              gold: "#DAA520",
+              warm: "#F4E4BC",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .hero-bg {
+        background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(139, 69, 19, 0.3)
+          ),
+          url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .area-image {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <a href="index.html" class="text-primary hover:text-secondary mr-4">
+              <i class="fas fa-arrow-left text-xl"></i>
+            </a>
+            <h1 class="text-xl font-bold text-primary">Holy Family Journey</h1>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="index.html"
+                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
+                >Home</a
+              >
+              <a
+                href="index.html#about"
+                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
+                >About</a
+              >
+              <a
+                href="index.html#regions"
+                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
+                >Regions</a
+              >
+              <a
+                href="index.html#contact"
+                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-bg h-96 flex items-center justify-center text-white relative"
+    >
+      <div class="text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          SINAI PENINSULA
+        </h1>
+        <p class="text-xl drop-shadow-md">The Gateway to Egypt</p>
+      </div>
+      <!-- Navigation dots -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2"
+      >
+        <div class="w-3 h-3 bg-white rounded-full opacity-100"></div>
+        <div class="w-3 h-3 bg-white/50 rounded-full"></div>
+        <div class="w-3 h-3 bg-white/50 rounded-full"></div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-primary mb-4">
+            Sacred Areas in Sinai
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Discover the holy sites and spiritual locations where the Holy
+            Family passed through during their journey to Egypt
+          </p>
+        </div>
+
+        <!-- Area 1 - Left Image, Right Text -->
+        <div class="flex flex-col lg:flex-row items-center mb-20 lg:mb-32">
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <img
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Mount Sinai"
+              class="area-image mx-auto"
+            />
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <h3 class="text-2xl font-bold text-primary mb-4">Mount Sinai</h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              The sacred mountain where Moses received the Ten Commandments.
+              This holy site has been a place of pilgrimage for centuries and
+              holds deep significance in the Holy Family's journey through the
+              Sinai Peninsula. The mountain's spiritual atmosphere and
+              breathtaking views continue to inspire visitors from around the
+              world.
+            </p>
+            <a
+              href="mount-sinai.html"
+              class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full font-semibold transition-colors inline-flex items-center"
+            >
+              Explore <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Area 2 - Right Image, Left Text -->
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 lg:mb-32"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+            />
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              Saint Catherine's Monastery
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              One of the oldest continuously operating Christian monasteries in
+              the world, built at the foot of Mount Sinai. This UNESCO World
+              Heritage site houses an incredible collection of ancient
+              manuscripts and icons, preserving the Christian heritage that
+              connects to the Holy Family's time in Egypt.
+            </p>
+            <a
+              href="saint-catherine.html"
+              class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full font-semibold transition-colors inline-flex items-center"
+            >
+              Explore <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Area 3 - Left Image, Right Text -->
+        <div class="flex flex-col lg:flex-row items-center mb-20 lg:mb-32">
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <img
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Wadi Feiran"
+              class="area-image mx-auto"
+            />
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <h3 class="text-2xl font-bold text-primary mb-4">Wadi Feiran</h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Known as the "Pearl of Sinai," this oasis valley is believed to be
+              one of the routes taken by the Holy Family. The area features palm
+              groves, ancient ruins, and a serene atmosphere that provides
+              insight into the landscape the Holy Family would have encountered
+              during their journey.
+            </p>
+            <a
+              href="wadi-feiran.html"
+              class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full font-semibold transition-colors inline-flex items-center"
+            >
+              Explore <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Area 4 - Right Image, Left Text -->
+        <div class="flex flex-col lg:flex-row-reverse items-center mb-20">
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Raithu"
+              class="area-image mx-auto"
+            />
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <h3 class="text-2xl font-bold text-primary mb-4">Raithu</h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              An ancient Christian settlement in southern Sinai that served as
+              an important stop for pilgrims and travelers. This historic site
+              represents the early Christian presence in the region and connects
+              to the broader story of Christianity's spread throughout Egypt
+              during the time of the Holy Family.
+            </p>
+            <a
+              href="raithu.html"
+              class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full font-semibold transition-colors inline-flex items-center"
+            >
+              Explore <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-orange-100">
+          &copy; 2024 Holy Family Journey. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
