@@ -4,55 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sinai Peninsula - Holy Family Journey</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#8B4513",
-              secondary: "#D2691E",
-              accent: "#CD853F",
-              gold: "#DAA520",
-              warm: "#F4E4BC",
-            },
-          },
-        },
-      };
-    </script>
+    <script src="scripts.js/tailwindConfig.js"></script>
+    <link rel="stylesheet" href="styles/region.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-      body {
-        font-family: "Inter", sans-serif;
-      }
-
-      .hero-bg {
-        background: linear-gradient(
-            135deg,
-            rgba(0, 0, 0, 0.4),
-            rgba(139, 69, 19, 0.3)
-          ),
-          url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80");
-        background-size: cover;
-        background-position: center;
-      }
-
-      .area-image {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      }
     </style>
   </head>
   <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+    <nav class="w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
@@ -85,154 +51,422 @@
               >
             </div>
           </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-primary hover:text-secondary"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-200"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
+            >Home</a
+          >
+          <a
+            href="index.html#about"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
+            >About</a
+          >
+          <a
+            href="index.html#regions"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
+            >Regions</a
+          >
+          <a
+            href="index.html#contact"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
+            >Contact</a
+          >
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section
-      class="hero-bg h-96 flex items-center justify-center text-white relative"
-    >
-      <div class="text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-          SINAI PENINSULA
-        </h1>
-        <p class="text-xl drop-shadow-md">The Gateway to Egypt</p>
-      </div>
-      <!-- Navigation dots -->
+    <!-- Hero Section with Carousel -->
+    <section class="carousel-container mt-4">
+      <!-- Slide 1 -->
       <div
-        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2"
+        class="carousel-slide active"
+        style="background-image: url(images/sinia/4.jpg)"
       >
-        <div class="w-3 h-3 bg-white rounded-full opacity-100"></div>
-        <div class="w-3 h-3 bg-white/50 rounded-full"></div>
-        <div class="w-3 h-3 bg-white/50 rounded-full"></div>
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            SINAI PENINSULA
+          </h1>
+          <p class="text-xl drop-shadow-md">The Gateway to Egypt</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/sinia/6.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            MOUNT SINAI
+          </h1>
+          <p class="text-xl drop-shadow-md">Sacred Mountain of Moses</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/sinia/7.jpeg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            SAINT CATHERINE
+          </h1>
+          <p class="text-xl drop-shadow-md">Ancient Christian Monastery</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/sinia/4.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg"></h1>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/sinia/1.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg"></h1>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Navigation dots -->
+      <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+        <div class="carousel-dot" data-index="3"></div>
+        <div class="carousel-dot" data-index="4"></div>
       </div>
     </section>
 
     <!-- Main Content -->
     <main class="py-16">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 arabic-text">
         <!-- Section Title -->
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-primary mb-4">
-            Sacred Areas in Sinai
+            الأماكن المقدسة في سيناء
           </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Discover the holy sites and spiritual locations where the Holy
-            Family passed through during their journey to Egypt
-          </p>
+          <h5 class="text-2xl">
+            اكتشف الأماكن المقدسة والأماكن الروحية التي مرت بها العائلة المقدسة
+            خلال رحلتها إلى مصر
+          </h5>
         </div>
 
         <!-- Area 1 - Left Image, Right Text -->
-        <div class="flex flex-col lg:flex-row items-center mb-20 lg:mb-32">
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
           <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
             <img
-              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              src="images/sinia/7.jpeg"
               alt="Mount Sinai"
               class="area-image mx-auto"
             />
           </div>
-          <div class="lg:w-1/2 text-center lg:text-left">
-            <h3 class="text-2xl font-bold text-primary mb-4">Mount Sinai</h3>
+          <div class="lg:w-1/2 text-center arabic-text">
+            <h3 class="text-3xl font-bold text-primary mb-4 rtl">رفح</h3>
             <p class="text-gray-700 mb-6 leading-relaxed">
-              The sacred mountain where Moses received the Ten Commandments.
-              This holy site has been a place of pilgrimage for centuries and
-              holds deep significance in the Holy Family's journey through the
-              Sinai Peninsula. The mountain's spiritual atmosphere and
-              breathtaking views continue to inspire visitors from around the
-              world.
+              رفح هل سبق وأن تخيلت بوابة عبور إلى أرض الحضارات؟ هنا في رفح،
+              المدينة الحدودية التي كانت تربط بين مصر وفلسطين منذ أقدم العصور،
+              تكمن قصة قديمة تحمل معاني عميقة. اسمها وحده يروي حكاية؛ "را-بح"،
+              الاسم المصري القديم الذي يعني "باب الوصول" أو "مدخل الوصول". إنها
+              حقًا بوابة التاريخ.
             </p>
-            <a
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              بين الرمال التي طمست معظم آثارها، كشفت الحفائر عن أسرار مدفونة.
+              أعمدة شاهقة من الجرانيت الأسود والسماقي، وقطع مكسورة من الفخار
+              والزجاج تُخبرنا عن أزمان غابرة. وهناك أيضًا بقايا أحجار يُقال إنها
+              لكنيسة قديمة تعود إلى القرنَين السابع والثامن الميلاديين، شاهدة
+              على عظمة الماضي.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              وفي أعماق هذا التراب، ظهرت تماثيل تحكي قصصًا. تمثال رخامي للعذراء
+              مريم، وقطعة أخرى صغيرة تمثل فارسًا شجاعًا يطعن التنين برمحه،
+              ويُرجح أنه القديس مار جرجس الروماني. إنها ليست مجرد تماثيل، بل
+              شواهد على الإيمان والصمود.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              ولم تنتهِ القصة هنا. بين أيدي الباحثين، ظهرت قطع نقدية من زمن
+              الرومان والبيزنطيين، لتؤكد أن رفح لم تكن مجرد مدينة؛ بل كانت
+              مركزًا نابضًا يعكس تعاقب الحضارات.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              وعلى هذا الطريق، رفح كانت أول نقطة حدودية تدخلها العائلة المقدسة
+              في رحلتها عبر مصر. وكأنها، منذ ذلك الحين، أُعطيت البركة لتحرس حدود
+              مصر الشرقية، وتبقى شاهدة على عبق التاريخ وحضارة لا تُنسى. هنا، حيث
+              تبدأ القصة، يبدأ التاريخ أيضًا في الحديث.
+            </p>
+            <!-- <a
               href="mount-sinai.html"
               class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full font-semibold transition-colors inline-flex items-center"
             >
               Explore <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+            </a> -->
           </div>
         </div>
 
         <!-- Area 2 - Right Image, Left Text -->
         <div
-          class="flex flex-col lg:flex-row-reverse items-center mb-20 lg:mb-32"
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 lg:mb-16"
         >
           <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
             <img
-              src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              src="images/sinia/8.jpg"
               alt="Saint Catherine's Monastery"
               class="area-image mx-auto"
             />
           </div>
-          <div class="lg:w-1/2 text-center lg:text-left">
+          <div class="lg:w-1/2 text-center lg:text-rigth">
             <h3 class="text-2xl font-bold text-primary mb-4">
-              Saint Catherine's Monastery
+              بيتليون (الشيخ زويد)
             </h3>
             <p class="text-gray-700 mb-6 leading-relaxed">
-              One of the oldest continuously operating Christian monasteries in
-              the world, built at the foot of Mount Sinai. This UNESCO World
-              Heritage site houses an incredible collection of ancient
-              manuscripts and icons, preserving the Christian heritage that
-              connects to the Holy Family's time in Egypt.
+              على أرض تل الشيخ زويد، تبدأ قصة أخرى، حيث كانت هذه المنطقة تعرف
+              قديمًا باسم "بيتليون" (Pitulion)، وهي مدينة غنية بالشواهد الأثرية
+              التي تحمل بصمات العصور المختلفة. بين أطلالها، نجد آثارًا تعود إلى
+              العصر المسيحي، ومن أبرزها بقايا كنيسة قديمة وحجرات مزيّنة بقطع
+              ملونة من الفسيفساء (الموزاييك) التي تأسر الأنظار بجمالها.
             </p>
-            <a
-              href="saint-catherine.html"
-              class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full font-semibold transition-colors inline-flex items-center"
-            >
-              Explore <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              كما تضم المنطقة بقايا قلعة رومانية مستطيلة الشكل، شُيدت من الطوب
+              الأحمر، وحمامًا رومانيًا يعكس أسلوب الحياة الفاخر في تلك الحقبة.
+              وإلى جانب ذلك، كشفت الحفائر عن مقابر من العصر الروماني، وتمثال
+              يُعتقد أنه للعذراء مريم، إضافة إلى عملات نقدية تعود إلى فترات
+              تاريخية متعددة.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              تل الشيخ زويد لم يبح بكل أسراره بعد؛ فتلاله الأثرية الأخرى ما زالت
+              تخبئ في جوفها مكنونات لم تُكتشف. وقد بدأت الحكاية الحقيقية لهذا
+              المكان عندما تم الكشف عنه لأول مرة عام 1913م بواسطة الأثري الفرنسي
+              جان كليدا أثناء أعمال الحفر الخاصة بقناة السويس
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              أما اسم "الشيخ زويد"، فهو تخليد لذكرى الشيخ زويد الذي توفي هنا عام
+              640م أثناء دخول العرب إلى مصر في عهد عمرو بن العاص. دفن في هذا
+              المكان، وأصبح اسمه شاهدًا على ارتباط التاريخ بالدين، والحضارة
+              بالإيمان.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              في بيتليون، تشعر وكأن الماضي يناديك لتكتشف خفاياه، وتعيش لحظات من
+              الزمن الذي مزج بين الحضارات بروح واحدة لا تُنسى.
+            </p>
           </div>
         </div>
 
         <!-- Area 3 - Left Image, Right Text -->
-        <div class="flex flex-col lg:flex-row items-center mb-20 lg:mb-32">
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
           <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
             <img
-              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              src="images/sinia/9.webp"
               alt="Wadi Feiran"
               class="area-image mx-auto"
             />
           </div>
-          <div class="lg:w-1/2 text-center lg:text-left">
-            <h3 class="text-2xl font-bold text-primary mb-4">Wadi Feiran</h3>
+          <div class="lg:w-1/2 text-center lg:text-rigth">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              أوستراكين (الفلوسيات)
+            </h3>
             <p class="text-gray-700 mb-6 leading-relaxed">
-              Known as the "Pearl of Sinai," this oasis valley is believed to be
-              one of the routes taken by the Holy Family. The area features palm
-              groves, ancient ruins, and a serene atmosphere that provides
-              insight into the landscape the Holy Family would have encountered
-              during their journey.
+              بين بحيرة البردويل وصحراء سيناء، تقع المحطة الرابعة في مسار
+              العائلة المقدسة، أوستراكين، التي يُطلق عليها اليوم "الفلوسيات".
+              اسمها القديم يروي حكايات عديدة؛ فقد كانت تُعرف في العصر الروماني
+              باسم "أوستراسين"، وهي نقطة التقاء الطرق الساحلية القديمة، حيث
+              تتفرع المسارات بين الشمال والجنوب.
             </p>
-            <a
-              href="wadi-feiran.html"
-              class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full font-semibold transition-colors inline-flex items-center"
+            <div
+              class="text-gray-700 mb-6 leading-relaxed"
+              style="direction: rtl"
             >
-              Explore <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+              هذا الموقع الاستراتيجي لم يكن مجرد نقطة عبور، بل كان مدينة زاخرة
+              بالحياة خلال العصر المسيحي، حيث كانت مقرًا لكرسي أسقفي. وتروي
+              الحفائر قصصًا مذهلة عن هذه المدينة؛ فقد عُثر على حصن بيزنطي يعود
+              إلى القرن الرابع أو الخامس الميلادي، محاط بآثار ثلاث كنائس على
+              الطراز البازيليكي، كل منها يحمل طابعًا خاصًا:
+              <ul
+                class="list-disc list-inside mb-6 text-right"
+                style="direction: rtl"
+              >
+                <li>
+                  <b>الكنيسة الجنوبية</b> بداخلها أعمدة رخامية منقوشة بحروف
+                  ورموز صليبية.
+                </li>
+                <li>
+                  <b>الكنيسة الشمالية</b> اكتُشفت عام 1914م، وتضم قاعدة عمود
+                  رخامية عليها صليب، وأرضيات فسيفسائية مزخرفة.
+                </li>
+                <li>
+                  <b>الكنيسة الغربية</b> يعود تاريخها إلى القرن الخامس الميلادي،
+                  وتضم حجرًا مزخرفًا برمز الصليب وأجزاء معمارية مدهشة.
+                </li>
+              </ul>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              لكن هذا ليس كل شيء. داخل هذه المدينة، تم الكشف عن غرف للمعيشة
+              وصالة طعام ومخازن مؤن، بالإضافة إلى خزانات مياه تُظهر التخطيط
+              الحضري المتقدم. ومن بين القطع الأثرية المكتشفة: أباريق ومصابيح
+              برونزية مزينة بأشكال حيوانية وصليبية، وعملات ذهبية تعود إلى القرن
+              السابع الميلادي.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              "الفلوسيات" ليست مجرد موقع أثري؛ إنها نافذة تطل على زمن ازدهرت فيه
+              الحضارة والإيمان، حيث تلتقي الحكايات التاريخية بالأدلة الملموسة
+              لتروي قصة مدينة كانت، وما زالت، تحتفظ بعبق الماضي وجماله.
+            </p>
           </div>
         </div>
 
         <!-- Area 4 - Right Image, Left Text -->
-        <div class="flex flex-col lg:flex-row-reverse items-center mb-20">
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 fade-in"
+        >
           <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
             <img
-              src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              src="images/sinia/3.jpg"
               alt="Raithu"
               class="area-image mx-auto"
             />
           </div>
-          <div class="lg:w-1/2 text-center lg:text-left">
-            <h3 class="text-2xl font-bold text-primary mb-4">Raithu</h3>
+          <div class="lg:w-1/2 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              رينوكورورا (العريش)
+            </h3>
             <p class="text-gray-700 mb-6 leading-relaxed">
-              An ancient Christian settlement in southern Sinai that served as
-              an important stop for pilgrims and travelers. This historic site
-              represents the early Christian presence in the region and connects
-              to the broader story of Christianity's spread throughout Egypt
-              during the time of the Holy Family.
+              العريش، المحطة الثالثة في رحلة العائلة المقدسة، كانت تعرف في العصر
+              الروماني باسم "رينوكورورا" أو "رينوكولورا". وفقًا لما ذكره
+              الجغرافي سترابون، كان هذا الاسم يعني "مقطوعو الأنف"، إذ كانت تُرسل
+              إليها المجرمون بعد عقوبة بتر أنوفهم. ومع ذلك، تحمل العريش بالعربية
+              معنى مختلفًا تمامًا؛ فهي تشير إلى "السقف" أو "المظلة"، ما يعكس
+              صورة شاعرية للمكان الذي يُعرش فيه للكروم وترفع فيه عناقيد العنب.
             </p>
-            <a
-              href="raithu.html"
-              class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full font-semibold transition-colors inline-flex items-center"
-            >
-              Explore <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              تُعد العريش عاصمة شمال سيناء وأحد أهم المواقع الأثرية فيها. بين
+              ثناياها، نجد بقايا كنائس قديمة تشهد على عمق الإيمان في هذا المكان.
+              ولا يزال هناك كنيسة مار جرجس التي تستقبل الزوار حتى اليوم، رمزًا
+              للماضي الممتد إلى الحاضر.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              هذا الموقع الأثري استحوذ على اهتمام المؤرخين وعلماء الآثار، فهو
+              يعكس تاريخًا متجذرًا يتشابك مع روايات الإيمان والحضارات. في
+              العريش، يمتزج عبق التاريخ مع أصالة المكان ليخلق تجربة لا تُنسى لكل
+              من يزورها.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 5 - Left Image, Right Text -->
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <img
+              src="images/sinia/5.jpg"
+              alt="Wadi Feiran"
+              class="area-image mx-auto"
+            />
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-rigth">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              بيلوزيوم (الفرما)
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              هل تتخيل مدينة تجمع بين القداسة والأساطير؟ "الفرما"، أو
+              "بيلوزيوم"، هي المحطة السابعة التي وقفت عندها العائلة المقدسة، وهي
+              واحدة من أكثر المواقع أهمية على الإطلاق، بفضل تاريخها الذي يمتد
+              عبر الزمن، واكتشافاتها الأثرية التي لا تزال تكشف عن كنوزها.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              في عام 870م، وصف الراهب برنار، الذي جاء من أنطاكية إلى مصر، زيارته
+              للفرما. تحدث عن كنيسة مخصصة للسيدة العذراء بجوار مغارتها، والتي
+              أقيمت تذكارًا لمرور العائلة المقدسة. هذه الرواية التاريخية تتقاطع
+              مع نصوص قديمة، مثل المخطوط 48 بدير المحرق، الذي يصف استقبال
+              المدينة للعائلة المقدسة، وكيف أضاءت الفرما حضورهم.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              كانت الفرما مركزًا مزدهرًا خلال العصور القديمة، وتظهر الاكتشافات
+              الأثرية الأخيرة عظمة هذه المدينة. ففي "تل مخزن" شرق الفرما، عُثر
+              على أكبر كنيسة بازيليكية في المنطقة حتى الآن. هذه الكنيسة تضم
+              صهريجين للمياه، طاحونة، غرف معيشة، مغارة، ومقابر للقديسين، ما يوضح
+              تعقيد الحياة الدينية والاجتماعية آنذاك.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              أما الكنيسة الغربية، التي تقع إلى الغرب من قلعة الفرما، فقد بدأ
+              اكتشافها منذ عام 1984م، وتعمل بعثة مصرية-ألمانية مشتركة للكشف عن
+              باقي أجزائها. يُعتقد أن هذه الكنيسة ستكون إحدى أكبر الكنائس في مصر
+              عند اكتمال الحفائر. الجزء المكتشف يشمل مغارة الكنيسة والهيكل
+              الدائري الذي يقع إلى الشرق.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              بعد إقامة العائلة المقدسة أيامًا قليلة في الفرما، يُرجح أنهم عبروا
+              البرزخ الضيق عند القنطرة، بين بحيرة المنزلة وبحيرة البلاح، لمواصلة
+              رحلتهم نحو شرق الدلتا والدلتا.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 6 - Right Image, Left Text -->
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/sinia/6.jpg"
+              alt="Raithu"
+              class="area-image mx-auto"
+            />
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              جارا (المحمدية)
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              نصل إلى المحطة السادسة من رحلة العائلة المقدسة، وهي "جارا" التي
+              تعرف اليوم باسم "المحمدية". تقع هذه المنطقة على الساحل الشمالي بين
+              تل القلس والفرما، وتمثل نقطة استراتيجية عند الطرف الغربي لبحيرة
+              البردويل.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              جارا" تحمل في طياتها أسرارًا لم تُكتشف بعد بالكامل. بدأت أولى"
+              محاولات التنقيب فيها عام 1913م، عندما أجرى الأثري الفرنسي جان
+              كليدا أبحاثه، لكن البحر أغار على أجزاء منها، مما أضاف تحديات للكشف
+              عن خباياها.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              تضم المنطقة أطلال حصن كبير ومبانٍ يعود تاريخها إلى القرنَين الخامس
+              والسادس الميلاديين. ويُعتقد أيضًا بوجود دير قديم هنا، رغم أن آثاره
+              لم تُكتشف بعد. هذه المحطة هي شاهدة على قصة مدينة كانت يومًا جزءًا
+              من طريق مهم يربط بين الشرق والغرب.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              في جارا، تختلط روح التاريخ بجمال الطبيعة، لتشكل محطة لا تُنسى في
+              مسار الرحلة المقدسة.
+            </p>
           </div>
         </div>
       </div>
@@ -242,9 +476,13 @@
     <footer class="bg-primary text-white py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="text-orange-100">
-          &copy; 2024 Holy Family Journey. All rights reserved.
+          &copy; 2025 Holy Family Journey. All rights reserved.
         </p>
       </div>
     </footer>
+
+    <!-- Carousel JavaScript -->
+    <script src="scripts.js/carousel.js"></script>
+    <script src="scripts.js/indexFunctions.js"></script>
   </body>
 </html>
