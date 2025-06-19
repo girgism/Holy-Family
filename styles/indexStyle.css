@@ -38,3 +38,13 @@ body {
   font-family: "Amiri", serif;
   direction: rtl;
 }
+
+.h-45 {
+  height: 36rem;
+  transition: height 0.3s ease, box-shadow 0.3s ease;
+}
+
+.h-45:hover {
+  height: 55rem;
+  box-shadow: 14px 10px 8px rgba(0, 0, 0, 0.2);
+}
