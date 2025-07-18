@@ -1,125 +1,216 @@
-// Function to scroll to regions section
-      function scrollToRegions() {
-        document.getElementById("regions").scrollIntoView({
+document.addEventListener("DOMContentLoaded", () => {
+  // Mobile menu functionality
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn")
+  const mobileMenu = document.getElementById("mobile-menu")
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden")
+    })
+  }
+
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault()
+      const target = document.querySelector(this.getAttribute("href"))
+      if (target) {
+        target.scrollIntoView({
           behavior: "smooth",
           block: "start",
-        });
+        })
       }
+      // Close mobile menu if open
+      if (mobileMenu) {
+        mobileMenu.classList.add("hidden")
+      }
+    })
+  })
 
-      // Mobile menu toggle
-      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
+  // Fade in animation on scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  }
 
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible")
+      }
+    })
+  }, observerOptions)
 
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-          mobileMenu.classList.add("hidden");
-        });
-      });
+  // Observe all fade-in elements
+  document.querySelectorAll(".fade-in").forEach((el) => {
+    observer.observe(el)
+  })
 
-      // Fade in animation on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
+  // Single Card Carousel functionality
+  const carouselWrapper = document.querySelector(".regions-carousel-wrapper")
+  const carouselSlides = document.querySelectorAll(".regions-carousel-slide")
+  const carouselDots = document.querySelectorAll(".regions-carousel-dot")
+  const prevButton = document.querySelector(".regions-carousel-prev")
+  const nextButton = document.querySelector(".regions-carousel-next")
+  const currentSlideElement = document.querySelector(".current-slide")
+  const totalSlidesElement = document.querySelector(".total-slides")
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      }, observerOptions);
+  if (carouselWrapper && carouselSlides.length > 0) {
+    let currentSlide = 0
+    let autoSlideInterval
+    const totalSlides = carouselSlides.length
 
-      document.querySelectorAll(".fade-in").forEach((el) => {
-        observer.observe(el);
-      });
+    // Set total slides in counter
+    if (totalSlidesElement) {
+      totalSlidesElement.textContent = totalSlides.toString()
+    }
 
-      // Add stagger effect to region cards
-      const regionCards = document.querySelectorAll("#regions .fade-in");
-      regionCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.1}s`;
-      });
+    // Function to update carousel
+    function updateCarousel() {
+      // Remove active class from all slides
+      carouselSlides.forEach((slide, index) => {
+        slide.classList.remove("active", "prev")
 
-      // Add stagger effect to service cards
-      const serviceCards = document.querySelectorAll("#services .fade-in");
-      serviceCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.1}s`;
-      });
-
-      // Form submission
-      document.querySelector("form").addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
-        if (name && email && message) {
-          alert("Thank you for your message! We will get back to you soon.");
-          this.reset();
-        } else {
-          alert("Please fill in all fields.");
+        if (index === currentSlide) {
+          slide.classList.add("active")
+        } else if (index < currentSlide) {
+          slide.classList.add("prev")
         }
-      });
+      })
 
-      // Form submission to save to file
-        // document.getElementById('contactForm').addEventListener('submit', async function(e) {
-        //     e.preventDefault();
-            
-        //     const name = document.getElementById('name').value;
-        //     const email = document.getElementById('email').value;
-        //     const message = document.getElementById('message').value;
-            
-        //     if (!name || !email || !message) {
-        //         alert('Please fill in all fields.');
-        //         return;
-        //     }
-            
-        //     const submitButton = this.querySelector('button[type="submit"]');
-        //     const originalText = submitButton.textContent;
-            
-        //     // Show loading state
-        //     submitButton.textContent = 'Sending...';
-        //     submitButton.disabled = true;
-            
-        //     try {
-        //         const response = await fetch('/save-contact', {
-        //             method: 'POST',
-        //             headers: {
-        //                 'Content-Type': 'application/json',
-        //             },
-        //             body: JSON.stringify({
-        //                 name: name,
-        //                 email: email,
-        //                 message: message
-        //             })
-        //         });
-                
-        //         if (response.ok) {
-        //             alert('Thank you for your message! We will get back to you soon.');
-        //             this.reset();
-        //         } else {
-        //             alert('Error sending message. Please try again.');
-        //         }
-        //     } catch (error) {
-        //         alert('Error sending message. Please try again.');
-        //         console.error('Error:', error);
-        //     } finally {
-        //         // Restore button state
-        //         submitButton.textContent = originalText;
-        //         submitButton.disabled = false;
-        //     }
-        // });
+      // Update dots
+      carouselDots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add("active")
+          dot.classList.remove("bg-gray-300")
+          dot.classList.add("bg-secondary")
+        } else {
+          dot.classList.remove("active")
+          dot.classList.remove("bg-secondary")
+          dot.classList.add("bg-gray-300")
+        }
+      })
+
+      // Update counter
+      if (currentSlideElement) {
+        currentSlideElement.textContent = (currentSlide + 1).toString()
+      }
+    }
+
+    // Function to go to next slide
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides
+      updateCarousel()
+    }
+
+    // Function to go to previous slide
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides
+      updateCarousel()
+    }
+
+    // Function to go to specific slide
+    function goToSlide(index) {
+      currentSlide = index
+      updateCarousel()
+    }
+
+    // Add click event to dots
+    carouselDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        goToSlide(index)
+        resetAutoSlide()
+      })
+    })
+
+    // Add click events to navigation buttons
+    if (prevButton) {
+      prevButton.addEventListener("click", () => {
+        prevSlide()
+        resetAutoSlide()
+      })
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", () => {
+        nextSlide()
+        resetAutoSlide()
+      })
+    }
+
+    // Auto-slide functionality
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 50000) // Change slide every 5 seconds
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval)
+      startAutoSlide()
+    }
+
+    // Touch/swipe functionality
+    let touchStartX = 0
+    let touchEndX = 0
+
+    carouselWrapper.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX
+      clearInterval(autoSlideInterval)
+    })
+
+    carouselWrapper.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX
+      handleSwipe()
+      startAutoSlide()
+    })
+
+    function handleSwipe() {
+      const swipeThreshold = 50
+      const diff = touchStartX - touchEndX
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe left - next slide
+          nextSlide()
+        } else {
+          // Swipe right - previous slide
+          prevSlide()
+        }
+      }
+    }
+
+    // Keyboard navigation
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        prevSlide()
+        resetAutoSlide()
+      } else if (e.key === "ArrowRight") {
+        nextSlide()
+        resetAutoSlide()
+      }
+    })
+
+    // Initialize carousel
+    updateCarousel()
+    startAutoSlide()
+
+    // Pause auto-slide when hovering over carousel
+    const carouselContainer = document.querySelector(".regions-carousel-container")
+    if (carouselContainer) {
+      carouselContainer.addEventListener("mouseenter", () => {
+        clearInterval(autoSlideInterval)
+      })
+
+      carouselContainer.addEventListener("mouseleave", () => {
+        startAutoSlide()
+      })
+    }
+  }
+})
+
+// Function to scroll to regions section
+function scrollToRegions() {
+  document.getElementById("regions").scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  })
+}

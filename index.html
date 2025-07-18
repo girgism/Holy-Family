@@ -10,7 +10,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-    <script src="scripts.js/tailwindConfig.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B4513",
+              secondary: "#D2691E",
+              accent: "#CD853F",
+              gold: "#DAA520",
+              warm: "#F4E4BC",
+            },
+          },
+        },
+      };
+    </script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
     </style>
@@ -22,29 +36,24 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex-shrink-0">
-            <h1 class="text-xl font-bold text-primary">Holy Family Journey</h1>
+            <h1 class="text-xl font-bold text-primary">رحلة العائلة المقدسة</h1>
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a
                 href="index.html"
                 class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
-                >Home</a
-              >
-              <a
-                href="#about"
-                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
-                >About</a
+                >الرئيسية</a
               >
               <a
                 href="#regions"
                 class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
-                >Regions</a
+                >المناطق</a
               >
               <a
-                href="#contact"
+                href="#about"
                 class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
-                >Contact</a
+                >عن الرحلة</a
               >
             </div>
           </div>
@@ -64,22 +73,17 @@
           <a
             href="index.html"
             class="block px-3 py-2 text-primary hover:text-secondary"
-            >Home</a
-          >
-          <a
-            href="#about"
-            class="block px-3 py-2 text-primary hover:text-secondary"
-            >About</a
+            >الرئيسية</a
           >
           <a
             href="#regions"
             class="block px-3 py-2 text-primary hover:text-secondary"
-            >Regions</a
+            >المناطق</a
           >
           <a
-            href="#contact"
+            href="#about"
             class="block px-3 py-2 text-primary hover:text-secondary"
-            >Contact</a
+            >عن الرحلة</a
           >
         </div>
       </div>
@@ -102,9 +106,8 @@
         <p
           class="text-lg md:text-xl mb-8 max-w-2xl mx-auto fade-in drop-shadow-sm"
         >
-          Discover the sacred path taken by the Holy Family through Egypt, a
-          journey of faith, hope, and divine protection that continues to
-          inspire millions around the world.
+          اكتشف المسار المقدس الذي اتخذته العائلة المقدسة عبر مصر، رحلة الإيمان
+          والأمل والحماية الإلهية التي لا تزال تلهم الملايين حول العالم.
         </p>
         <button
           onclick="scrollToRegions()"
@@ -168,186 +171,190 @@
           </p>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8"
-        >
-          <!-- Region Card 1 -->
-          <div
-            class="bg-white rounded-xl shadow-lg p-6 text-center card-hover fade-in"
-          >
-            <div
-              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <i class="fas fa-map-marked-alt text-secondary text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-primary mb-3">شمال سيناء</h3>
-            <p class="text-gray-600 mb-4">
-              أول منطقة دخلتها العائلة المقدسة في رحلتها إلى مصر.
-            </p>
-            <a
-              href="sinai.html"
-              class="bg-secondary hover:bg-primary text-white px-4 py-2 rounded-lg transition-colors"
-              >أعرف أكثر</a
-            >
-          </div>
-
-          <!-- Region Card 2 -->
-          <div
-            class="bg-white rounded-xl shadow-lg p-6 text-center card-hover fade-in"
-          >
-            <div
-              class="bg-gold/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <i class="fas fa-mosque text-gold text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-primary mb-3">
-              القاهرة الكبرى
-            </h3>
-            <p class="text-gray-600 mb-4">
-              منطقة تاريخية وجدت فيها العائلة المقدسة ملجأً ومأوىً.
-            </p>
-            <a
-              href="old-cairo.html"
-              class="bg-secondary hover:bg-primary text-white px-4 py-2 rounded-lg transition-colors"
-              >أعرف أكثر</a
-            >
-          </div>
-
-          <!-- Region Card 3 -->
-          <div
-            class="bg-white rounded-xl shadow-lg p-6 text-center card-hover fade-in"
-          >
-            <div
-              class="bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <i class="fas fa-mountain text-accent text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-primary mb-3">
-              وادي النطرون
-            </h3>
-            <p class="text-gray-600 mb-4">
-              المناطق الوسطى مع العديد من الأديرة والأماكن المقدسة.
-            </p>
-            <a
-              href="middle-egypt.html"
-              class="bg-secondary hover:bg-primary text-white px-4 py-2 rounded-lg transition-colors"
-              >أعرف أكثر</a
-            >
-          </div>
-
-          <!-- Region Card 4 -->
-          <div
-            class="bg-white rounded-xl shadow-lg p-6 text-center card-hover fade-in"
-          >
-            <div
-              class="bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <i class="fas fa-water text-primary text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-primary mb-3">
-              شرق الدلتا والدلتا
-            </h3>
-
-            <p class="text-gray-600 mb-4">
-              منطقة الدلتا الخصبة ذات المجتمعات المسيحية القديمة.
-            </p>
-            <a
-              href="nile-delta.html"
-              class="bg-secondary hover:bg-primary text-white px-4 py-2 rounded-lg transition-colors"
-              >أعرف أكثر</a
-            >
-          </div>
-
-          <!-- Region Card 5 -->
-          <div
-            class="bg-white rounded-xl shadow-lg p-6 text-center card-hover fade-in"
-          >
-            <div
-              class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <i class="fas fa-church text-red-600 text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-primary mb-3">صعيد مصر</h3>
-            <p class="text-gray-600 mb-4">
-              المناطق الجنوبية ذات الأديرة القديمة والتراث القبطي.
-            </p>
-            <a
-              href="upper-egypt.html"
-              class="bg-secondary hover:bg-primary text-white px-4 py-2 rounded-lg transition-colors"
-              >أعرف أكثر</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 fade-in">
-          <h2 class="text-4xl font-bold text-primary mb-4">تواصل معنا</h2>
-          <p class="text-xl text-gray-700">
-            يسعدنا التواصل معك. أرسل لنا رسالة وسنرد عليك في أقرب وقت ممكن
-          </p>
-        </div>
-
-        <div class="bg-warm rounded-2xl shadow-xl p-8 fade-in">
-          <form class="space-y-6 arabic-text" id="contactForm">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-primary mb-2"
-                  >الاسم</label
+        <!-- Single Card Carousel -->
+        <div class="regions-carousel-container relative max-w-md mx-auto">
+          <div class="regions-carousel-wrapper">
+            <!-- Region Card 1 -->
+            <div class="regions-carousel-slide active">
+              <div
+                class="bg-white rounded-xl shadow-lg p-3 text-center card-hover"
+              >
+                <div
+                  class="w-full h-64 items-center justify-center mx-auto mb-1 overflow-hidden"
                 >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary transition-all duration-200"
-                  placeholder="اسمك الكامل"
-                />
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-primary mb-2"
-                  >البريد الإلكتروني</label
+                  <img
+                    src="./images/sina-card1.png"
+                    alt="Cairo"
+                    class="w-full rounded-xl h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-2xl font-semibold text-primary mb-1">
+                  شمال سيناء
+                </h3>
+                <p class="text-gray-600 mb-1 leading-relaxed">
+                  أول منطقة دخلتها العائلة المقدسة في رحلتها إلى مصر.
+                </p>
+                <a
+                  href="sinai.html"
+                  class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-lg transition-colors inline-block"
+                  >أعرف أكثر</a
                 >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary transition-all duration-200"
-                  placeholder="your.email@example.com"
-                />
               </div>
             </div>
-            <div>
-              <label
-                for="message"
-                class="block text-sm font-medium text-primary mb-2"
-                >رسالتك</label
+
+            <!-- Region Card 2 -->
+            <div class="regions-carousel-slide">
+              <div
+                class="bg-white rounded-xl shadow-lg p-3 text-center card-hover"
               >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary transition-all duration-200"
-                placeholder="أخبرنا عن اهتمامك برحلة العائلة المقدسة..."
-              ></textarea>
+                <div
+                  class="w-full h-64 items-center justify-center mx-auto mb-1 overflow-hidden"
+                >
+                  <img
+                    src="./images/Cairo/c-card.png"
+                    alt="Cairo"
+                    class="w-full rounded-xl h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-2xl font-semibold text-primary mb-1">
+                  القاهرة الكبرى
+                </h3>
+                <p class="text-gray-600 mb-1 leading-relaxed">
+                  منطقة تاريخية وجدت فيها العائلة المقدسة ملجأً ومأوىً.
+                </p>
+                <a
+                  href="old-cairo.html"
+                  class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-lg transition-colors inline-block"
+                  >أعرف أكثر</a
+                >
+              </div>
             </div>
-            <div class="text-center">
-              <button
-                type="submit"
-                class="bg-secondary hover:bg-primary text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+
+            <!-- Region Card 3 -->
+            <div class="regions-carousel-slide">
+              <div
+                class="bg-white rounded-xl shadow-lg p-3 text-center card-hover"
               >
-                إرسال
-              </button>
+                <div
+                  class="w-full h-64 items-center justify-center mx-auto mb-1 overflow-hidden"
+                >
+                  <img
+                    src="./images/w-card.png"
+                    alt="Cairo"
+                    class="w-full rounded-xl h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-2xl font-semibold text-primary mb-1">
+                  وادي النطرون
+                </h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  المناطق الوسطى مع العديد من الأديرة والأماكن المقدسة.
+                </p>
+                <a
+                  href="middle-egypt.html"
+                  class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-lg transition-colors inline-block"
+                  >أعرف أكثر</a
+                >
+              </div>
             </div>
-          </form>
+
+            <!-- Region Card 4 -->
+            <div class="regions-carousel-slide">
+              <div
+                class="bg-white rounded-xl shadow-lg p-3 text-center card-hover"
+              >
+                <div
+                  class="w-full h-64 items-center justify-center mx-auto mb-1 overflow-hidden"
+                >
+                  <img
+                    src="./images/sh-card.png"
+                    alt="Cairo"
+                    class="w-full rounded-xl h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-2xl font-semibold text-primary mb-1">
+                  شرق الدلتا والدلتا
+                </h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  منطقة الدلتا الخصبة ذات المجتمعات المسيحية القديمة.
+                </p>
+                <a
+                  href="nile-delta.html"
+                  class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-lg transition-colors inline-block"
+                  >أعرف أكثر</a
+                >
+              </div>
+            </div>
+
+            <!-- Region Card 5 -->
+            <div class="regions-carousel-slide">
+              <div
+                class="bg-white rounded-xl shadow-lg p-3 text-center card-hover"
+              >
+                <div
+                  class="w-full h-64 items-center justify-center mx-auto mb-1 overflow-hidden"
+                >
+                  <img
+                    src="./images/u-card.png"
+                    alt="Cairo"
+                    class="w-full rounded-xl h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-2xl font-semibold text-primary mb-1">
+                  صعيد مصر
+                </h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  المناطق الجنوبية ذات الأديرة القديمة والتراث القبطي.
+                </p>
+                <a
+                  href="upper-egypt.html"
+                  class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-lg transition-colors inline-block"
+                  >أعرف أكثر</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button
+            class="regions-carousel-prev absolute top-1/2 -left-4 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-primary p-3 rounded-full shadow-lg z-10 transition-all"
+          >
+            <i class="fas fa-chevron-left text-lg"></i>
+          </button>
+          <button
+            class="regions-carousel-next absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-primary p-3 rounded-full shadow-lg z-10 transition-all"
+          >
+            <i class="fas fa-chevron-right text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Navigation Dots and Counter -->
+        <div class="flex flex-col items-center">
+          <div
+            class="regions-carousel-counter text-primary font-semibold mb-4 text-lg"
+          ></div>
+          <div class="flex justify-center space-x-3">
+            <button
+              class="regions-carousel-dot w-4 h-4 rounded-full bg-secondary transition-all duration-300"
+              data-index="0"
+            ></button>
+            <button
+              class="regions-carousel-dot w-4 h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+              data-index="1"
+            ></button>
+            <button
+              class="regions-carousel-dot w-4 h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+              data-index="2"
+            ></button>
+            <button
+              class="regions-carousel-dot w-4 h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+              data-index="3"
+            ></button>
+            <button
+              class="regions-carousel-dot w-4 h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+              data-index="4"
+            ></button>
+          </div>
         </div>
       </div>
     </section>
@@ -355,105 +362,9 @@
     <!-- Footer -->
     <footer class="bg-primary text-white py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="col-span-1 md:col-span-2">
-            <h3 class="text-2xl font-bold mb-4 text-gold">
-              Holy Family Journey
-            </h3>
-            <p class="text-orange-100 mb-4 max-w-md">
-              Preserving and sharing the sacred heritage of the Holy Family's
-              journey through Egypt, inspiring faith and connecting communities
-              across the world.
-            </p>
-            <div class="flex space-x-4">
-              <a
-                href="https://www.facebook.com/girgis.merzik"
-                target="_blank"
-                class="bg-secondary hover:bg-accent p-3 rounded-full transition-colors"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://www.x.com/"
-                target="_blank"
-                class="bg-gold hover:bg-yellow-500 p-3 rounded-full transition-colors"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                class="bg-accent hover:bg-orange-600 p-3 rounded-full transition-colors"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.youtube.com/"
-                target="_blank"
-                class="bg-red-600 hover:bg-red-700 p-3 rounded-full transition-colors"
-              >
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold mb-4 text-gold">Quick Links</h4>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-orange-100 hover:text-gold transition-colors"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="text-orange-100 hover:text-gold transition-colors"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#regions"
-                  class="text-orange-100 hover:text-gold transition-colors"
-                  >Regions</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  class="text-orange-100 hover:text-gold transition-colors"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold mb-4 text-gold">Contact Info</h4>
-            <div class="space-y-2 text-orange-100">
-              <p>
-                <i class="fas fa-envelope mr-2 text-secondary"></i>
-                girgis12mirzek@gmail.com
-              </p>
-              <p>
-                <i class="fas fa-phone mr-2 text-secondary"></i> +20 1224092116
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt mr-2 text-secondary"></i> Minya,
-                Egypt
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="border-t border-secondary/30 mt-8 pt-8 text-center">
-          <p class="text-orange-100">
-            &copy; 2025 Holy Family Journey. All rights reserved.
-          </p>
-        </div>
+        <p class="text-orange-100 text-center text-sm mb-4">
+          &copy; 2025 Holy Family Journey. All rights reserved.
+        </p>
       </div>
     </footer>
 

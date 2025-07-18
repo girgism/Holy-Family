@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -16,10 +18,10 @@ body {
 .hero-bg {
   background: linear-gradient(
       135deg,
-      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.4),
       rgba(139, 69, 19, 0.3)
     ),
-    url(../images/home.png);
+    url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home-VBWYZ1zm0xbD2BOll2TdnoV1idFpHC.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -39,12 +41,91 @@ body {
   direction: rtl;
 }
 
-.h-45 {
-  height: 36rem;
-  transition: height 0.3s ease, box-shadow 0.3s ease;
+/* Single Card Carousel Styles */
+.regions-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.h-45:hover {
-  height: 55rem;
-  box-shadow: 14px 10px 8px rgba(0, 0, 0, 0.2);
+.regions-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.regions-carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.regions-carousel-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.regions-carousel-slide.prev {
+  transform: translateX(-100%);
+}
+
+.regions-carousel-dot {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.regions-carousel-dot.active {
+  background-color: #d2691e !important;
+  transform: scale(1.2);
+}
+
+.regions-carousel-prev,
+.regions-carousel-next {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.regions-carousel-prev:hover,
+.regions-carousel-next:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+}
+
+.regions-carousel-counter {
+  font-size: 1.1rem;
+  color: #8b4513;
+}
+
+/* Responsive adjustments for single card */
+@media (max-width: 640px) {
+  .regions-carousel-container {
+    max-width: 320px;
+  }
+
+  .regions-carousel-wrapper {
+    height: 400px;
+  }
+
+  .regions-carousel-prev {
+    left: -2px;
+  }
+
+  .regions-carousel-next {
+    right: -2px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .regions-carousel-container {
+    max-width: 380px;
+  }
 }
