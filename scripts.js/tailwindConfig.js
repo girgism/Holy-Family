@@ -3,6 +3,9 @@
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: {
+        'alarabiya': ['AE Alarabiya', 'sans-serif'],
+      },
       colors: {
         primary: "#8B4513",
         secondary: "#D2691E",
