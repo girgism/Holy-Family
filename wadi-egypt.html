@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وادي النطرون</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="scripts.js/tailwindConfig.js"></script>
+    <link rel="stylesheet" href="styles/region.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <a href="index.html" class="text-primary hover:text-secondary mr-4">
+              <i class="fas fa-arrow-left text-xl"></i>
+            </a>
+            <h1 class="text-xl font-bold text-primary">
+              رحلة العائلة المقدسة
+            </h1>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="index.html"
+                class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
+                >الرئيسية</a
+              >
+              <a
+                href="index.html#about"
+                class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
+                >عن الرحلة</a
+              >
+              <a
+                href="index.html#regions"
+                class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
+                >المناطق</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-primary hover:text-secondary"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-200"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
+            >Home</a
+          >
+          <a
+            href="index.html#about"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
+            >About</a
+          >
+          <a
+            href="index.html#regions"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
+            >Regions</a
+          >
+          <a
+            href="index.html#contact"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section class="carousel-container mt-1">
+      <!-- Slide 1 -->
+      <div
+        class="carousel-slide active"
+        style="background-image: url(images/wadi/1.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            وادي النطرون
+          </h1>
+          <p class="text-xl drop-shadow-md">بركة المسيح وملاذ النساك</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/wadi/4.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            ديرالانبا بيشوي
+          </h1>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/wadi/6.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            دير دير الانبا مقار
+          </h1>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/wadi/9.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            دير البراموس
+          </h1>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/wadi/13.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            دير السريان
+          </h1>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Navigation dots -->
+      <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+        <div class="carousel-dot" data-index="3"></div>
+        <div class="carousel-dot" data-index="4"></div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 arabic-text">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-primary mb-4">
+            وادي النطرون: بركة المسيح وملاذ النساك
+          </h2>
+          <h5 class="text-2xl">
+            <div class="text-center lg:text-rigth">
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                واصلت العائلة المقدسة مسيرتها غربًا، متجهة نحو وادي النطرون، وهو
+                منخفض صحراوي مغلق يقع غرب دلتا النيل. اشتهر الوادي منذ العصور
+                الفرعونية باستخراج ملح النطرون، الذي كان يُستخدم في الصباغة
+                والصناعات المختلفة، كما كان عنصرًا أساسيًا في عملية تحنيط
+                الموتى.
+              </p>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                عندما زارت العائلة المقدسة الوادي، كان مكانًا قاحلًا خاليًا من
+                الحياة، لكن السيد المسيح باركه، متنبئًا بأنه سيصبح يومًا ما
+                ملاذًا للنساك والمتوحدين، الذين سيعيشون في عبادة الله كالملايكة.
+                وبعد قرون، في الفترة ما بين 330 و340 ميلاديًا، أسس القديس
+                مكاريوس الكبير (أبو مقار) أول تجمع رهباني في وادي النطرون، ليبدأ
+                بذلك ازدهار الحياة الرهبانية وانتشار القلالي والمغارات، حيث
+                احتضن الوادي آلاف الرهبان والنساك الذين اتخذوه مقرًا للصلاة
+                والتأمل.
+              </p>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                سُمي الوادي فيما بعد ببرية شيهيت، أي "ميزان القلوب"، وظل شاهدًا
+                على التاريخ الروحي لمصر. لا تزال أربعة أديرة عظيمة قائمة فيه حتى
+                اليوم، وهي: دير العذراء السريان، دير العذراء البراموس، دير
+                القديس الأنبا بيشوي، ودير أبو مقار. وعند مرور العائلة المقدسة
+                بمنطقة نبع الحمراء، أطلق السيد المسيح نبع ماء عذب، يُعرف اليوم
+                باسم نبع مريم، ولا يزال موجودًا على بعد حوالي ثلاثة كيلومترات من
+                دير البراموس، وسط منطقة غنية بملح النطرون، ليظل هذا النبع شاهدًا
+                على البركة التي حلّت بهذه الأرض.
+              </p>
+            </div>
+          </h5>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <img
+              src="images/wadi/1.jpg"
+              alt="Mount Sinai"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+          <div class="text-center lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <img
+              src="images/wadi/2.jpg"
+              alt="Mount Sinai"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Area 1 - Left Image, Right Text -->
+        <h3 class="text-center text-2xl font-bold text-primary mb-4">
+          دير الانبا بيشوي
+        </h3>
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <img
+              src="images/wadi/3.jpg"
+              alt="Mount Sinai"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+
+          <div class="text-center lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <img
+              src="images/wadi/4.1.jpg"
+              alt="Mount Sinai"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Area 2 - Right Image, Left Text -->
+        <h3 class="text-center text-2xl font-bold text-primary mb-4">
+          دير الانبا مقار
+        </h3>
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 lg:mb-16"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/wadi/5.jpg"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/wadi/6.jpg"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/wadi/7.jpg"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Area 3 - Right Image, Left Text -->
+        <h3 class="text-center text-2xl font-bold text-primary mb-4">
+          دير البراموس
+        </h3>
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 lg:mb-16"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/wadi/8.jpg"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/wadi/9.jpg"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Area 4 - Right Image, Left Text -->
+        <h3 class="text-center text-2xl font-bold text-primary mb-4">
+          دير السريان
+        </h3>
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 lg:mb-16"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/wadi/11.jpg"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/wadi/12.jpg"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <img
+              src="images/wadi/13.jpg"
+              alt="Saint Catherine's Monastery"
+              class="area-image mx-auto"
+              onclick="zoomIn(this)"
+              ondblclick="zoomOut(this)"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-orange-100">
+          &copy; 2025 Holy Family Journey. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Carousel JavaScript -->
+    <script src="scripts.js/carousel.js"></script>
+    <script src="scripts.js/indexFunctions.js"></script>
+  </body>
+</html>

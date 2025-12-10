@@ -214,3 +214,18 @@ function scrollToRegions() {
     block: "start",
   })
 }
+
+function zoomIn(img) {
+  img.style.transform = "scale(1.5)";
+  img.style.transition = "transform 0.5s ease-in-out";
+}
+
+
+function zoomOut(img) {
+  img.style.transform = "scale(1)";
+  img.style.transition = "transform 0.5s ease-in-out";
+  setTimeout(() => {
+    img.style.transform = "";
+    img.style.transition = "";
+  }, 500)
+}
