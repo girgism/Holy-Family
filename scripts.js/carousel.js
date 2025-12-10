@@ -1,15 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Mobile menu functionality
-  const mobileMenuBtn = document.getElementById("mobile-menu-btn")
-  const mobileMenu = document.getElementById("mobile-menu")
-
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden")
-    })
-  }
-
-  // Carousel functionality
+  // Carousel functionality ONLY - Mobile menu is handled in indexFunctions.js
   const slides = document.querySelectorAll(".carousel-slide")
   const dots = document.querySelectorAll(".carousel-dot")
 
@@ -52,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add click event to dots
   dots.forEach((dot) => {
-    dot.addEventListener("click", function () {
+    dot.addEventListener("click", function (e) {
+      e.stopPropagation() // Prevent conflicts with other click handlers
       const slideIndex = Number.parseInt(this.getAttribute("data-index"))
       showSlide(slideIndex)
       stopSlideshow() // Stop automatic slideshow when user interacts

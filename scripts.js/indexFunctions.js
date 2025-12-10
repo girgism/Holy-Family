@@ -4,28 +4,49 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.getElementById("mobile-menu")
 
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", () => {
+    mobileMenuBtn.addEventListener("click", (e) => {
+      e.stopPropagation()
+      const isHidden = mobileMenu.classList.contains("hidden")
       mobileMenu.classList.toggle("hidden")
+      console.log("Mobile menu:", isHidden ? "opened" : "closed") // Debug
+    })
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.add("hidden")
+      }
     })
   }
 
   // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
-      e.preventDefault()
-      const target = document.querySelector(this.getAttribute("href"))
+      const href = this.getAttribute("href")
+      
+      if (href === "#") return
+      
+      const target = document.querySelector(href)
       if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        })
-      }
-      // Close mobile menu if open
-      if (mobileMenu) {
-        mobileMenu.classList.add("hidden")
+        e.preventDefault()
+        
+        // Close mobile menu if open
+        if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.add("hidden")
+        }
+        
+        // Small delay for smooth transition
+        setTimeout(() => {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          })
+        }, 100)
       }
     })
   })
+
+  // Rest of your code...
 
   // Fade in animation on scroll
   const observerOptions = {

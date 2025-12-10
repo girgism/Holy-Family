@@ -1,5 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"); */
-
+/* 
 @font-face {
   font-family: "AE Alarabiya";
   src: url("./arfonts-ae-alarabiya.ttf") format("truetype");
@@ -7,9 +7,13 @@
   font-style: normal;
 }
 
-/* body {
-  font-family: "Inter", sans-serif;
+body {
+  font-family: "AE Alarabiya", serif;
 } */
+
+body {
+  font-family: "Cairo", sans-serif;
+}
 
 .fade-in {
   opacity: 0;
@@ -28,12 +32,26 @@
       rgba(0, 0, 0, 0.4),
       rgba(139, 69, 19, 0.3)
     ),
-    url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/home-VBWYZ1zm0xbD2BOll2TdnoV1idFpHC.png");
+    url("../images/home.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
+@media (max-width: 768px) {
+  .hero-bg {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(139, 69, 19, 0.3)
+      ),
+      url("../images/home_mobile_view.png");
+    height: 88.7%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
 .card-hover {
   transition: all 0.3s ease;
 }
@@ -44,7 +62,7 @@
 }
 
 .arabic-text {
-  font-family: "Amiri", serif;
+  /* font-family: "Amiri", serif; */
   direction: rtl;
 }
 

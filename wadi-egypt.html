@@ -6,45 +6,64 @@
     <title>وادي النطرون</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts.js/tailwindConfig.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
     <script src="scripts.js/tailwindConfig.js"></script>
     <link rel="stylesheet" href="styles/region.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-    </style>
   </head>
   <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
             <a href="index.html" class="text-primary hover:text-secondary mr-4">
               <i class="fas fa-arrow-left text-xl"></i>
             </a>
-            <h1 class="text-xl font-bold text-primary">
-              رحلة العائلة المقدسة
-            </h1>
+            <h1 class="text-xl font-bold text-primary">رحلة العائلة المقدسة</h1>
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a
+                href="sinai.html"
+                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+                role="menuitem"
+                >شمال سيناء</a
+              >
+
+              <a
+                href="cairo.html"
+                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+                role="menuitem"
+                >القاهرة الكبرى</a
+              >
+
+              <a
+                href="nile-delta.html"
+                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+                role="menuitem"
+                >الدلتا</a
+              >
+              <a
+                href="upper-egypt.html"
+                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+                role="menuitem"
+                >الصعيد</a
+              >
+              <a
                 href="index.html"
                 class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
                 >الرئيسية</a
-              >
-              <a
-                href="index.html#about"
-                class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
-                >عن الرحلة</a
-              >
-              <a
-                href="index.html#regions"
-                class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
-                >المناطق</a
               >
             </div>
           </div>
@@ -59,35 +78,48 @@
         </div>
       </div>
       <!-- Mobile menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-white border-t border-gray-200"
-      >
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
         <div class="px-2 pt-2 pb-3 space-y-1">
           <a
+            href="sinai.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >شمال سيناء</a
+          >
+
+          <a
+            href="cairo.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >القاهرة الكبرى</a
+          >
+
+          <a
+            href="wadi-egypt.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >وادي النطرون</a
+          >
+          <a
+            href="nile-delta.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >الدلتا</a
+          >
+          <a
+            href="upper-egypt.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >الصعيد</a
+          >
+          <a
             href="index.html"
-            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
-            >Home</a
-          >
-          <a
-            href="index.html#about"
-            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
-            >About</a
-          >
-          <a
-            href="index.html#regions"
-            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
-            >Regions</a
-          >
-          <a
-            href="index.html#contact"
-            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
-            >Contact</a
+            class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
+            >الرئيسية</a
           >
         </div>
       </div>
     </nav>
-
     <!-- Hero Section with Carousel -->
     <section class="carousel-container mt-1">
       <!-- Slide 1 -->
@@ -96,9 +128,9 @@
         style="background-image: url(images/wadi/1.jpg)"
       >
         <div class="carousel-overlay">
-          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          <h5 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
             وادي النطرون
-          </h1>
+          </h5>
           <p class="text-xl drop-shadow-md">بركة المسيح وملاذ النساك</p>
         </div>
       </div>
@@ -106,12 +138,12 @@
       <!-- Slide 2 -->
       <div
         class="carousel-slide"
-        style="background-image: url(images/wadi/4.jpg)"
+        style="background-image: url(images/wadi/7.jpg)"
       >
         <div class="carousel-overlay">
-          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          <h5 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
             ديرالانبا بيشوي
-          </h1>
+          </h5>
         </div>
       </div>
 
@@ -121,9 +153,9 @@
         style="background-image: url(images/wadi/6.jpg)"
       >
         <div class="carousel-overlay">
-          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          <h5 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
             دير دير الانبا مقار
-          </h1>
+          </h5>
         </div>
       </div>
 
@@ -133,9 +165,9 @@
         style="background-image: url(images/wadi/9.jpg)"
       >
         <div class="carousel-overlay">
-          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          <h5 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
             دير البراموس
-          </h1>
+          </h5>
           <p class="text-xl drop-shadow-md"></p>
         </div>
       </div>
@@ -145,9 +177,9 @@
         style="background-image: url(images/wadi/13.jpg)"
       >
         <div class="carousel-overlay">
-          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          <h5 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
             دير السريان
-          </h1>
+          </h5>
           <p class="text-xl drop-shadow-md"></p>
         </div>
       </div>

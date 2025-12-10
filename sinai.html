@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sinai Peninsula - Holy Family Journey</title>
+    <title>شمال سيناء</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -12,42 +12,49 @@
     />
     <script src="scripts.js/tailwindConfig.js"></script>
     <link rel="stylesheet" href="styles/region.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-    </style>
   </head>
   <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
             <a href="index.html" class="text-primary hover:text-secondary mr-4">
               <i class="fas fa-arrow-left text-xl"></i>
             </a>
-            <h1 class="text-xl font-bold text-primary">Holy Family Journey</h1>
+            <h1 class="text-xl font-bold text-primary">رحلة العائلة المقدسة</h1>
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a
+                href="cairo.html"
+                class="block px-3 py-2 text-xl text-primary hover:text-secondary hover:bg-gray-50"
+                role="menuitem"
+                >القاهرة الكبرى</a
+              >
+
+              <a
+                href="wadi-egypt.html"
+                class="block px-3 py-2 text-xl text-primary hover:text-secondary hover:bg-gray-50"
+                role="menuitem"
+                >وادي النطرون</a
+              >
+              <a
+                href="nile-delta.html"
+                class="block px-3 py-2 text-xl text-primary hover:text-secondary hover:bg-gray-50"
+                role="menuitem"
+                >الدلتا</a
+              >
+              <a
+                href="upper-egypt.html"
+                class="block px-3 py-2 text-xl text-primary hover:text-secondary hover:bg-gray-50"
+                role="menuitem"
+                >الصعيد</a
+              >
+              <a
                 href="index.html"
-                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
-                >Home</a
-              >
-              <a
-                href="index.html#about"
-                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
-                >About</a
-              >
-              <a
-                href="index.html#regions"
-                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
-                >Regions</a
-              >
-              <a
-                href="index.html#contact"
-                class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium transition-colors"
-                >Contact</a
+                class="text-xl text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
+                >الرئيسية</a
               >
             </div>
           </div>
@@ -62,47 +69,60 @@
         </div>
       </div>
       <!-- Mobile menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-white border-t border-gray-200"
-      >
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
         <div class="px-2 pt-2 pb-3 space-y-1">
           <a
+            href="sinai.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >شمال سيناء</a
+          >
+
+          <a
+            href="cairo.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >القاهرة الكبرى</a
+          >
+
+          <a
+            href="wadi-egypt.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >وادي النطرون</a
+          >
+          <a
+            href="nile-delta.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >الدلتا</a
+          >
+          <a
+            href="upper-egypt.html"
+            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+            role="menuitem"
+            >الصعيد</a
+          >
+          <a
             href="index.html"
-            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
-            >Home</a
-          >
-          <a
-            href="index.html#about"
-            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
-            >About</a
-          >
-          <a
-            href="index.html#regions"
-            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
-            >Regions</a
-          >
-          <a
-            href="index.html#contact"
-            class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50 rounded-md transition-colors"
-            >Contact</a
+            class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
+            >الرئيسية</a
           >
         </div>
       </div>
     </nav>
-
     <!-- Hero Section with Carousel -->
-    <section class="carousel-container mt-4">
+    <section class="carousel-container mt-1">
       <!-- Slide 1 -->
       <div
         class="carousel-slide active"
-        style="background-image: url(images/sinia/4.jpg)"
+        style="background-image: url(images/sinia/5.jpg)"
       >
         <div class="carousel-overlay">
           <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-            SINAI PENINSULA
+            شمال سيناء
           </h1>
-          <p class="text-xl drop-shadow-md">The Gateway to Egypt</p>
+          <p class="text-xl drop-shadow-md" dir="rtl">بوابة مصر</p>
         </div>
       </div>
 
@@ -113,9 +133,8 @@
       >
         <div class="carousel-overlay">
           <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-            MOUNT SINAI
+            جارا (المحمدية)
           </h1>
-          <p class="text-xl drop-shadow-md">Sacred Mountain of Moses</p>
         </div>
       </div>
 
@@ -126,19 +145,20 @@
       >
         <div class="carousel-overlay">
           <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-            SAINT CATHERINE
+            رفح
           </h1>
-          <p class="text-xl drop-shadow-md">Ancient Christian Monastery</p>
         </div>
       </div>
 
       <!-- Slide 4 -->
       <div
         class="carousel-slide"
-        style="background-image: url(images/sinia/4.jpg)"
+        style="background-image: url(images/sinia/8.jpg)"
       >
         <div class="carousel-overlay">
-          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg"></h1>
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            بيتليون (الشيخ زويد)
+          </h1>
           <p class="text-xl drop-shadow-md"></p>
         </div>
       </div>
@@ -148,7 +168,9 @@
         style="background-image: url(images/sinia/1.jpg)"
       >
         <div class="carousel-overlay">
-          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg"></h1>
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            بيلوزيوم (الفرما)
+          </h1>
           <p class="text-xl drop-shadow-md"></p>
         </div>
       </div>
@@ -284,7 +306,7 @@
         >
           <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
             <img
-              src="images/sinia/9.webp"
+              src="images/sinia/9.jpg"
               alt="Wadi Feiran"
               class="area-image mx-auto"
             />
