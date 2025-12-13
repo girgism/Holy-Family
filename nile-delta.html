@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>شرق الدلتا و الدلتا</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="scripts.js/tailwindConfig.js"></script>
+    <link rel="stylesheet" href="./styles/css/lightbox.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +17,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="scripts.js/tailwindConfig.js"></script>
     <link rel="stylesheet" href="styles/region.css" />
   </head>
@@ -35,40 +36,33 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a
-                href="sinai.html"
-                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
-                role="menuitem"
-                >شمال سيناء</a
-              >
-
-              <a
                 href="cairo.html"
-                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+                class="block px-3 py-2 text-xl text-primary hover:text-secondary hover:bg-gray-50"
                 role="menuitem"
                 >القاهرة الكبرى</a
               >
 
               <a
                 href="wadi-egypt.html"
-                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+                class="block px-3 py-2 text-xl text-primary hover:text-secondary hover:bg-gray-50"
                 role="menuitem"
                 >وادي النطرون</a
               >
               <a
-                href="nile-delta.html"
-                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+                href="sinai.html"
+                class="block px-3 py-2 text-xl text-primary hover:text-secondary hover:bg-gray-50"
                 role="menuitem"
-                >الدلتا</a
+                >شمال سيناء</a
               >
               <a
                 href="upper-egypt.html"
-                class="block px-3 py-2 text-primary hover:text-secondary hover:bg-gray-50"
+                class="block px-3 py-2 text-xl text-primary hover:text-secondary hover:bg-gray-50"
                 role="menuitem"
                 >الصعيد</a
               >
               <a
                 href="index.html"
-                class="text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
+                class="text-xl text-primary hover:text-secondary px-3 py-2 text-xl font-medium transition-colors"
                 >الرئيسية</a
               >
             </div>
@@ -127,9 +121,512 @@
       </div>
     </nav>
     <!-- Hero Section with Carousel -->
+    <section class="carousel-container mt-1">
+      <!-- Slide 1 -->
+      <div
+        class="carousel-slide active"
+        style="background-image: url(images/delta/Caro/1.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            تل بسطة
+          </h2>
+        </div>
+      </div>
 
+      <!-- Slide 2 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/delta/Caro/2.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            المحمة
+          </h2>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/delta/Caro/3.jpeg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            بلبيس
+          </h2>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/delta/Caro/4.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            سمنود
+          </h2>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/delta/Caro/5.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            دقادوس
+          </h2>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/delta/Caro/6.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            البرلس
+          </h2>
+        </div>
+      </div>
+      <!-- Slide 7 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/delta/Caro/7.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h1 class="text-xl md:text-6xl font-bold mb-16 drop-shadow-lg">
+            سخا
+          </h1>
+        </div>
+      </div>
+
+      <!-- Navigation dots -->
+      <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+        <div class="carousel-dot" data-index="3"></div>
+        <div class="carousel-dot" data-index="4"></div>
+        <div class="carousel-dot" data-index="5"></div>
+        <div class="carousel-dot" data-index="6"></div>
+      </div>
+    </section>
     <!-- Main Content -->
+    <main class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 arabic-text">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-primary mb-4">
+            الأماكن المقدسة في الدلتا وشرق الدلتا
+          </h2>
+          <h5 class="text-2xl">
+            اكتشف الأماكن المقدسة والأماكن الروحية التي مرت بها العائلة المقدسة
+            خلال رحلتها إلى مصر
+          </h5>
+        </div>
 
+        <!-- Area 1 - Left Image, Right Text -->
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <a href="images/delta/1.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/1.jpg"
+                alt="Mount Sinai"
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+            <br />
+            <a href="images/delta/3.jfif" data-lightbox="myGallery">
+              <img
+                src="images/delta/3.jfif"
+                alt="Saint Catherine's Monastery"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center arabic-text">
+            <h3 class="text-3xl font-bold text-primary mb-4 rtl">
+              بوبسطة (تل بسطة):مدينة المعابد والأسرار
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              كانت تل بسطة مدينة عظيمة تعج بالمعابد والأوثان. اسمها القديم
+              "بر-باست" يعني "بيت باست"، نسبة إلى الإلهة باستت التي كانت ترمز
+              للقطة. عند دخول يسوع المدينة، سقطت أصنامها أمام وجهه وتحطمت، مما
+              أثار غضب الكهنة وسكان المدينة. ورغم ذلك، استضاف أحد الأتقياء،
+              واسمه أقلوم، العائلة المقدسة في بيته. صنع الطفل يسوع معجزة بشفاء
+              زوجة أقلوم من الشلل، ثم ساعدهم في الخروج من المدينة بأمان، مصاحبًا
+              إياهم إلى مكان قريب وآمن.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              في مسار رحلتهم الطويلة والمليئة بالعجائب، وصلت العائلة المقدسة إلى
+              منطقة تل بسطة، التي تقع شرق الدلتا وتُعرف اليوم باسم "تل بسطة"،
+              على بُعد حوالي كيلومترين من مدينة الزقازيق وحوالي 85 كيلومترًا
+              شمال شرق القاهرة. هنا، بدأت فصلاً جديدًا من قصتهم الملهمة.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              عند وصولهم إلى حدود المدينة، استظلّت العائلة المقدسة تحت شجرة
+              كبيرة. شعر الطفل يسوع بالعطش، ولكن المياه كانت بعيدة المنال. اضطرت
+              السيدة العذراء، رغم تعبها، إلى ترك طفلها برعاية يوسف النجار لتبحث
+              عن الماء بين سكان المدينة. دخلت العذراء القرية تطلب القليل من
+              الماء، لكن الأهالي رفضوا مساعدتها، مما أصابها بالأسى والإرهاق.
+              عادت خالية اليدين، لتجد الطفل يسوع ويوسف النجار نائمين.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              عندما استيقظ الطفل الإلهي وشعر بحزن أمه، مدّ يده الصغيرة ورسم خطين
+              متقاطعين على الأرض. وفي تلك اللحظة، انبثق نبع ماء عذب. بارك يسوع
+              النبع قائلاً: "كل من يأتي ويستحم من هذا البئر في مثل هذا اليوم من
+              كل عام سيشفى من أمراضه." شربت العائلة المقدسة من النبع، وشكرت الله
+              على نعمته.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              <span>اكتشاف البئر العجيب</span><br />
+
+              وفي عام 1977، أعلنت جامعة الزقازيق عن اكتشاف بئر في تل بسطة، شمال
+              صالة الأعمدة بالمعبد الكبير. كان البئر مبنيًا من الطوب المحروق
+              ويعود إلى العصر الروماني، بعمق 6.6 أمتار. أثناء الحفريات، تفجرت
+              المياه من عين جانبية بداخله، مما عزز الاعتقاد بأنه البئر الذي صنعه
+              الطفل يسوع. تم نشر تفاصيل هذا الكشف الأثري في جريدة الأهرام، مما
+              أعاد إلى الأذهان قصة هذا المكان المقدس.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              من أبرز ما تبقى من تاريخ تل بسطة بقايا المعبد الكبير للإلهة باستت،
+              بالإضافة إلى أطلال المعابد، المقابر، والقصور. هذا المكان لا يزال
+              شاهدًا على مزيجٍ من الحضارة القديمة والأحداث المقدسة التي حفرها
+              الزمن في ذاكرة التاريخ. رحلة العائلة المقدسة في تل بسطة ليست مجرد
+              قصة، بل هي شهادة على الإيمان والعجائب التي لا تزال تلهم الزائرين
+              حتى يومنا هذا
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 2 - Right Image, Left Text -->
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 lg:mb-16"
+        >
+          <div>
+            <a href="images/delta/2.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/2.jpg"
+                alt="Saint Catherine's Monastery"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <a href="images/delta/10.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/10.jpg"
+                alt="Saint Catherine's Monastery"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-rigth">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              المحمة: محطة الاستحمام المقدسة
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              في محطتهم الثانية، وصلت العائلة المقدسة إلى مكان يُعرف بـ"المحمة"،
+              وهو اسم عربي مشتق من الفعل "حمَّ"، الذي يعني الاغتسال بالماء. ورد
+              ذكر المحمة مرتين في السنكسار القبطي: أولاً في اليوم الرابع
+              والعشرين من شهر بشنس، حيث جاء: "ومن هناك ذهبوا إلى المحمة"، ثم في
+              اليوم الثامن من شهر بؤونه: "في هذا اليوم تذكار الكنيسة المقدسة
+              المكرسة للسيدة العذراء والمعروفة باسم المحمة، حيث كانت عين ماء
+              وفيرة البركات قد نبعت في طريق العودة من مصر".
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              عندما وصلت العائلة المقدسة إلى هذا المكان، أنبع الطفل الإلهي نبع
+              ماء عذب، اغتسل بمائه، وغسلت السيدة العذراء ملابسه هناك. كان لهذا
+              النبع خواص شافية، إذ يقال إن كل من استخدم مياهه شُفي من أمراضه.
+              أقامت العائلة المقدسة في مغارة بالقرب من النبع، وعبر الزمن، بُنيت
+              كنيسة في الموقع تُعرف اليوم بكنيسة العذراء مريم في مسطرد، التي
+              تبعد حوالي 10 كيلومترات عن مدينة القاهرة.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              يشير الأنبا غريغوريوس في كتابه "الدير المحرق" إلى أن هذا المكان
+              كان يُعرف بـ"المحمة" لأنه شهد غسل الطفل الإلهي وملابسه. هذا الحدث
+              المقدس منح الموقع مكانة استثنائية، لا تزال تُلهم الزوار الذين
+              يتوافدون إليه طلبًا للبركة والشفاء.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 3 - Left Image, Right Text -->
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <a
+              href="images/delta/4.jpeg"
+              data-title="أوستراكين (الفلوسيات)"
+              data-lightbox="myGallery"
+            >
+              <img
+                src="images/delta/4.jpeg"
+                alt="Mount Sinai"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-rigth">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              بلبيس: مدينة الترحيب بالعائلة المقدسة
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              في محطتهم الثالثة، اتجهت العائلة المقدسة شمالاً نحو الشرق لتصل إلى
+              مدينة بلبيس، التي كان اسمها المصري القديم "بيلبيو" واسمها القبطي
+              "بيسوك". كما عُرفت باسم "بيس" و"بر-بيس"، والتي يُعتقد أن معناها
+              "بيت المعبود بس"، ثم تحوّل اسمها إلى "بل-بيس"، ويُقال أيضًا إن
+              معناها "القصر الجميل".
+            </p>
+            <div
+              class="text-gray-700 mb-6 leading-relaxed"
+              style="direction: rtl"
+            >
+              وفقًا لما ذكره الأنبا زخارياس أسقف سخا، شهدت بلبيس معجزة فريدة حيث
+              أقام الرب يسوع شابًا ميتًا، كان الابن الوحيد لأرملة في المدينة.
+              استقبل أهل بلبيس العائلة المقدسة بترحاب كبير وأكرموا ضيافتهم، مما
+              جعلها تُعتبر أول مدينة رحبت بالعائلة المقدسة أثناء رحلتهم.
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              استظلّت العائلة المقدسة تحت شجرة كبيرة، التي عُرفت فيما بعد باسم
+              "شجرة العذراء مريم". يروي التقليد أن هذه الشجرة أصبحت مقدسة بين
+              أهل المدينة. وفي واقعة لاحقة أثناء مرور جنود نابليون بونابرت
+              ببلبيس، حاولوا قطع خشب من "شجرة العذراء" لاستخدامه في طهي طعامهم.
+              ولكن عندما ضربوا الشجرة بالفأس، بدأت تدمى، مما أصابهم بالرعب
+              ودفعهم للتراجع عن فعلتهم.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              ظلّت الشجرة قائمة حتى منتصف القرن التاسع عشر، وهي اليوم ذكرى حية
+              لزيارة العائلة المقدسة إلى بلبيس، حيث تتجلى بركاتها في الذاكرة
+              الجماعية لأهل المدينة وزوارها.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 4 - Right Image, Left Text -->
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <a href="images/delta/5.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/5.jpg"
+                alt="Raithu"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              منية جناح (منية سمنود): عبور العائلة المقدسة إلى قلب الدلتا
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              في طريقها المبارك، وصلت العائلة المقدسة إلى منية جناح، التي تُعرف
+              اليوم بمنية سمنود، وهي إحدى القرى التابعة لمركز أجا بمحافظة
+              الدقهلية. هذا المكان التاريخي كان شاهدًا على عبور العائلة المقدسة
+              لنهر النيل عبر فرع دمياط، حيث واصلت رحلتها نحو مدينة سمنود داخل
+              الدلتا.
+            </p>
+
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              سبنيتوس (سمنود): مدينة الأوثان والبركة المقدسة
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              تقع مدينة سمنود شمال شرق محافظة الغربية، على ضفاف فرع دمياط من نهر
+              النيل، وعلى بعد حوالي خمس كيلومترات من مدينة المحلة الكبرى، وخمسة
+              عشر كيلومترًا من مدينة المنصورة في محافظة الدقهلية. يعود اسم سمنود
+              إلى "سيبنوتى" أو "جيمنوتى"، ويعني "موجد الإله" أو "موجدة الإله"،
+              إذ كانت المدينة مشهورة بصناعة الأوثان والأصنام، مما جعلها تعرف
+              بأنها "المدينة التي تصنع الآلهة".
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              هناك تقليد راسخ في سمنود، تدعمه المخطوطات الأثرية التي تم
+              اكتشافها، يروي أن الكنيسة الحالية المكرسة باسم الشهيد أبانوب،
+              والتي ترجع إلى أكثر من ألف عام، تم بناؤها على أنقاض كنيسة قديمة
+              كانت مكرسة للعذراء مريم. هذه الكنيسة القديمة، بدورها، بُنيت على
+              نفس البقعة التي أقامت فيها العائلة المقدسة. وفي موقع الكنيسة، توجد
+              بئر ماء شرقيها، يقول التقليد إن المسيح بارك هذا البئر بنفسه.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              بهذا، تحققت النبوة التي قالها الرب يسوع لأمه، حيث وعد أنه سيقام في
+              هذه البلدة، وفي هذا المكان، بيعة باسمها وباسمه، لتظل سمنود شاهدًا
+              على البركة المقدسة التي حلت بها منذ تلك اللحظة التاريخية.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 5 - Left Image, Right Text -->
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div>
+            <a href="images/delta/6.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/6.jpg"
+                alt="Wadi Feiran"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="images/delta/11.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/11.jpg"
+                alt="Wadi Feiran"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-rigth">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              دقادوس: مهد الكنائس والمقدسات
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              تقع دقادوس في منطقة تابعة لمدينة ميت غمر في محافظة الدقهلية، وهي
+              تعد امتدادًا عمرانيًا لها، حيث يفصل بينهما فقط شريط السكك
+              الحديدية. اشتُق اسم "دقادوس" من الكلمة اليونانية-القبطية "تي
+              ثيئوتوكوس"، التي تعني "والدة الإله"، وهو ارتباط عميق بالمقدسات
+              المسيحية. وقد ورد ذكر دقادوس في "معجم البلدان" للمؤرخ والجغرافي
+              ياقوت الحموي في القرن الثالث عشر الميلادي، كما ورد في كتاب
+              "جغرافية مصر في العصر القبطي" للمؤرخ أميلينو، الذي نُشر في عام
+              1893.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              تحتوي دقادوس اليوم على كنيسة قديمة مكرسة لوالدة الإله العذراء
+              مريم، التي تأسست في عام 1888، وهي مشيدة فوق كنيسة أقدم يعود
+              تاريخها إلى عام 1239. هذه الكنيسة ليست الأولى في المنطقة، بل
+              سبقتها كنائس أخرى، يعود تاريخ أحدها إلى القرن الرابع الميلادي،
+              حينما أمرت الملكة هيلانة ببناء كنائس في الأماكن التي زارتها
+              العائلة المقدسة، مما يضفي على دقادوس طابعًا تاريخيًا ودينيًا
+              عريقًا.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 6 - Right Image, Left Text -->
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <a href="images/delta/7.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/7.jpg"
+                alt="Raithu"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              البرلس: بين النبوات والبركة
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              واصلت العائلة المقدسة رحلتها في شمال الدلتا، متجهة نحو البرلس،
+              ومنها إلى قرية شجرة التين وقرية المطلع. هناك، استضافهم أحد أهل
+              القرية، وتنبأ الرب ببناء كنيسة في تلك المنطقة التي أصبحت لاحقًا
+              محطًا مقدسًا في تاريخهم.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              تُعرف منطقة البرلس في سيرة القديسة دميانة بوادي السيسبان، نسبة إلى
+              نوع من الأشجار التي تُستخدم كمصدات للرياح ولها فوائد طبية. تشتهر
+              هذه المنطقة بزراعة الزعفران والأعشاب الطبية، كما عُرفت أيضًا باسم
+              "البراري" بسبب الأراضي البور والمغمورة بالمياه التي تحيط ببحيرة
+              البرلس.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              تعد بحيرة البرلس ثاني أكبر البحيرات الطبيعية في مصر، وكان يُطلق
+              عليها تاريخيًا اسم بحيرة بوطو. وكانت مدينة الزعفران عاصمة منطقة
+              البرلس، حيث يتمتع المكان بمكانة تاريخية ودينية هامة. في الوقت
+              الحاضر، يوجد في البرلس دير القديسة دميانة للراهبات، الذي أُقيم حول
+              مقبرة القديسة دميانة، بالإضافة إلى الكنيسة التي شيدتها الملكة
+              هيلانة ودُشنت على يد البابا ألكسندروس التاسع عشر.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 7 - Right Image, Left Text -->
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 fade-in"
+        >
+          <div>
+            <a href="images/delta/8.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/8.jpg"
+                alt="Raithu"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="images/delta/12.jpg" data-lightbox="myGallery">
+              <img
+                src="images/delta/12.jpg"
+                alt="Raithu"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              سخا: أثر قدم العذراء وبركة المكان
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              واصلت العائلة المقدسة رحلتها عبر الفرع السبينتي للنيل إلى الجهة
+              الغربية، حيث وصلت إلى مدينة سخا التي تقع على بعد حوالي 3 كيلومترات
+              جنوب كفر الشيخ، وتعتبر حاليًا جزءًا منها. يُعتقد أن المدينة كانت
+              تعرف في فترة ما باسم "بلاد السباخ"، ثم تغير اسمها إلى "بيخا
+              إيسوس"، والذي يعني "كعب يسوع"، تيمُّنًا بمكان الوقوف المقدس.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              يرتبط اسم "سخا" بحادثة تاريخية فريدة، حيث وقفت العذراء مريم بالطفل
+              يسوع فوق صخرة، فطُبعت آثار قدميه على الصخرة، ومن هذا المكان انطلقت
+              مياه صافية وشافية، مما جعل المدينة تُعرف بمكان البركة المقدسة. في
+              القرن الثالث عشر، تم إخفاء الحجر الذي يحمل آثار القدمين في فناء
+              الدير حتى تم اكتشافه مجددًا في 27 سبتمبر 1984.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              في سخا، بُنيت كنيسة مكرسة باسم العذراء مريم، إلى جانب مغطس تم
+              تشييده على الطراز الروماني. كما كان هناك دير يُعرف بدير المغطس،
+              الذي استمر عامرًا بالرهبان حتى نهاية القرن الثاني عشر الميلادي.
+              ذكر أبو المكارم هذا الدير في كتابه عن الكنائس، وأشار تقى الدين
+              المقريزي في "المواعظ والاعتبار" إلى موقعه بين بحيرة البرلس وفرع
+              رشيد، حيث كان يُعد من المزارات الشهيرة التي يتوافد إليها المسيحيون
+              للتبرك في يوم 24 بشنس، إذ كان يظهر فيها السيدة العذراء.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              بعد زيارة مدينة سخا، عبرت العائلة المقدسة فرع النيل إلى الناحية
+              الغربية، وواصلت رحلتها المباركة نحو وادي النطرون.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- Footer -->
     <footer class="bg-primary text-white py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -142,5 +639,6 @@
     <!-- Carousel JavaScript -->
     <script src="scripts.js/carousel.js"></script>
     <script src="scripts.js/indexFunctions.js"></script>
+    <script src="./scripts.js/js/lightbox-plus-jquery.min.js"></script>
   </body>
 </html>
