@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>القاهرة الكبرى</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="scripts.js/tailwindConfig.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="./styles/css/lightbox.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +18,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="scripts.js/tailwindConfig.js"></script>
     <link rel="stylesheet" href="styles/region.css" />
   </head>
@@ -128,8 +130,653 @@
       </div>
     </nav>
     <!-- Hero Section with Carousel -->
+    <section class="carousel-container mt-1">
+      <!-- Slide 1 -->
+      <div
+        class="carousel-slide active"
+        style="background-image: url(images/cairo-im/caro/1.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            العدرا الزيتون
+          </h2>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/2.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            العدرا العزباويه
+          </h2>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/3.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            العدرا المغيثة حارة الروم
+          </h2>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/4.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            العدرا حارة زويل
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/5.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            العدرا قصر الريحان
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/6.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            العدرا و مارجرجس
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/7.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            القديس سيرجيوس وواخس
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Slide 8 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/8.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            القديسه بربارة
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Slide 9 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/9.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            المطرية
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Slide 10 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/10.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            الكنيسة المعلقة
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Slide 11 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/5.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            دير مارجرجس
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Slide 12 -->
+      <div
+        class="carousel-slide"
+        style="background-image: url(images/cairo-im/caro/12.jpg)"
+      >
+        <div class="carousel-overlay">
+          <h2
+            class="text-2xl md:text-2xl font-bold mb-16 drop-shadow-lg"
+            dir="rtl"
+          >
+            عدرا المعادى
+          </h2>
+          <p class="text-xl drop-shadow-md"></p>
+        </div>
+      </div>
+
+      <!-- Navigation dots -->
+      <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+        <div class="carousel-dot" data-index="3"></div>
+        <div class="carousel-dot" data-index="4"></div>
+        <div class="carousel-dot" data-index="5"></div>
+        <div class="carousel-dot" data-index="6"></div>
+        <div class="carousel-dot" data-index="7"></div>
+        <div class="carousel-dot" data-index="8"></div>
+        <div class="carousel-dot" data-index="9"></div>
+        <div class="carousel-dot" data-index="10"></div>
+        <div class="carousel-dot" data-index="11"></div>
+      </div>
+    </section>
 
     <!-- Main Content -->
+    <main class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 arabic-text">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-primary mb-4">
+            الأماكن المقدسة في القاهرة الكبرى
+          </h2>
+          <h5 class="text-2xl">
+            اكتشف الأماكن المقدسة والأماكن الروحية التي مرت بها العائلة المقدسة
+            خلال رحلتها إلى مصر
+          </h5>
+        </div>
+
+        <!-- Area 1 -  Text -->
+        <div class="text-center mb-16">
+          <h3 class="text-3xl font-bold text-primary mb-4">
+            عين شمس: مدينة الشمس وسقوط الأوثان
+          </h3>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            اتجهت العائلة المقدسة إلى منطقة عين شمس، الواقعة شمال شرق القاهرة،
+            وهي المدينة التي عُرفت قديمًا باسم أون، وتعني في المصرية القديمة
+            "العمود" أو "البرج"، في إشارة ربما إلى أعمدتها ومعابدها الشهيرة. وقد
+            ورد ذكر هذه المدينة في الكتاب المقدس بأسماء متعددة، منها مدينة الشمس
+            (أشعياء 19:18)، بيت شمس (إرميا 43:15)، وأون (حزقيال 30:17).
+          </p>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            خلال العصر اليوناني، حملت المدينة اسم هليوبوليس، أي "مدينة الشمس"،
+            وكانت مركزًا علميًا ودينيًا هامًا في مصر القديمة، حيث درس فيها
+            العديد من الفلاسفة والكهنة. وفي ذلك الزمن، كانت تسكنها جالية يهودية
+            كبيرة، وكان لهم معبد خاص في ليونتوبوليس المجاورة، يُعرف بهيكل
+            أونياس، الذي بناه الكاهن أونياس الرابع ليكون بديلاً عن هيكل أورشليم.
+          </p>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            عندما دخلت العائلة المقدسة المدينة، اهتزت معابدها وسقطت أوثانها
+            وتحطمت أصنامها، في مشهد يرمز إلى مجيء النور الحقيقي الذي أشرق على
+            مصر، فحمل معه البركة والإيمان، وسجّل صفحة جديدة في تاريخ هذه المدينة
+            العريقة.
+          </p>
+        </div>
+
+        <!-- Area 2 - Right Image, Left Text -->
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <a href="images/cairo-im/1.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/1.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center arabic-text">
+            <h3 class="text-3xl font-bold text-primary mb-4 rtl">
+              المطرية: حيث استظلت العائلة المقدسة تحت شجرة مريم
+            </h3>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              واصلت العائلة المقدسة رحلتها حتى وصلت إلى المطرية، إحدى مناطق شمال
+              القاهرة، والتي احتفظت بذكرى مرورهم حتى يومنا هذا. في هذا المكان،
+              استظلت العائلة المقدسة تحت شجرة الجميز الشهيرة، التي تُعرف بـ"شجرة
+              مريم"، حيث باركها الطفل يسوع وتدفقت بجوارها مياه بئر عذبة شربوا
+              منها، فصارت ينبوعًا مقدسًا يقصده الزوار للتبرك به. وبينما كانت
+              السيدة العذراء تغسل ملابس الطفل يسوع، نمت حول البئر نباتات عطرية
+              ذات رائحة زكية، عُرفت لاحقًا باسم نبات البلسان (البلسم)، الذي
+              اشتهرت به المطرية، وكان يُستخدم في صناعة الأدوية والعطور، وكذلك في
+              إعداد الميرون المقدس.
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              وقد ذكر بعض المؤرخين هذا البئر باسم "بئر البلسم"، وما زالت أسماء
+              الشوارع في المطرية تحتفظ بذكرى هذه الأحداث، مثل شارع البلسم وبئر
+              مريم. كما أشار السيوطي في كتابه "غرائب العجائب" إلى أن بئر البلسم
+              كانت تُسقى منها شجرة البلسان، التي نُسبت خصائصها الشفائية إلى
+              المياه المباركة التي اغتسل فيها المسيح.
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              لسوء الحظ، اختفى آخر شجر للبلسان في المطرية خلال القرن السابع عشر
+              بسبب فيضان النيل، ولم يعد يُزرع في مصر بعد ذلك. ومع ذلك، بقيت شجرة
+              مريم رمزًا حيًا لمرور العائلة المقدسة، حيث حرص الكثير من الرحالة
+              الأوروبيين في العصور الوسطى على زيارتها والتبرك بها. وعندما
+              افتُتحت قناة السويس عام 1869، زارت إمبراطورة فرنسا أوجيني شجرة
+              مريم كجزء من احتفالاتها بمصر. وفي عام 1967، أصدرت هيئة البريد
+              المصرية طابعًا تذكاريًا تخليدًا لهذه الشجرة المباركة، التي لا تزال
+              تقف كشاهد على رحلة العائلة المقدسة في أرض مصر.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 3 - Right Image, Left Text -->
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center mb-20 lg:mb-16"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-12">
+            <a href="images/cairo-im/2.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/2.jpg"
+                alt="Saint Catherine's Monastery"
+                class="area-image mx-auto"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-rigth">
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              الزيتون: بين التاريخ والتجليات الروحية
+            </h3>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              واصلت العائلة المقدسة مسيرتها من المطرية وعين شمس متجهة نحو مصر
+              القديمة، لكن المراجع القديمة لا تذكر صراحةً مرورهم بمنطقة الزيتون،
+              حيث أن اسمها حديث النشأة ولم تكن معروفة بهذا الاسم في تلك الفترة.
+              تأسست كنيسة العذراء بالزيتون عام 1925، أي بعد قرون طويلة من رحلة
+              العائلة المقدسة، مما يجعل ذكرها في السياق التاريخي للرحلة غير
+              موثق.
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              ومع ذلك، فإن الموقع الجغرافي للزيتون، باعتبارها تقع بين المطرية
+              وعين شمس من جهة، ومصر القديمة من جهة أخرى، يضعها على المسار
+              المحتمل لرحلة العائلة المقدسة، مما يعزز من احتمال مرورهم بها. هذا،
+              إلى جانب التجليات المبهرة للسيدة العذراء فوق قباب كنيسة الزيتون،
+              التي بدأت في 2 أبريل 1968، يجعل الكثيرين يرون في الأمر إشارةً
+              روحية إلى ارتباط المكان بزيارة العائلة المقدسة له قديمًا.
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              وقد وصف البابا شنوده الثالث ظهور العذراء في الزيتون بقوله إنها
+              "عادت لتحتفل بذكريات قديمة، مفعمة بالشوق للعودة إلى المكان الذي
+              زارته سابقًا"، في إشارة إلى إمكانية وجود ارتباط تاريخي بين المنطقة
+              ورحلة العائلة المقدسة.
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              إلى جوار الكنيسة القديمة، تم بناء كاتدرائية العذراء الجديدة، حيث
+              وضع البابا شنوده الثالث حجر الأساس لها في مارس 1976، لتظل الزيتون
+              شاهدًا على التجليات الإلهية والميراث الروحي العريق.
+            </p>
+          </div>
+        </div>
+
+        <!-- Area 4 -  Text -->
+        <div class="text-center mb-16">
+          <h3 class="text-3xl font-bold text-primary mb-4">
+            وسط القاهرة: محطات روحية على درب العائلة المقدسة
+          </h3>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            استمرت العائلة المقدسة في رحلتها نحو مصر القديمة، مارّةً عبر حارة
+            زويلة، التي تحمل هذا الاسم نسبةً إلى قبيلة زويلة المغربية، التي
+            استوطنت مصر مع القائد الفاطمي جوهر الصقلي. تعد هذه المنطقة واحدة من
+            المحطات المهمة في المسار، إذ تضم كنيسة العذراء الأثرية، والتي يُرجح
+            أن تاريخ بنائها يعود إلى منتصف القرن الخامس الميلادي، أي حوالي مائتي
+            عام قبل دخول العرب مصر، وفقًا لما ذكره المؤرخ المقريزي. وقد أُعيد
+            بناؤها في القرن الحادي عشر، وأصبحت مقرًا للكرسي البطريركي في الفترة
+            الممتدة من عهد البابا يوأنس الثامن (البابا الثمانين) وحتى البابا
+            متاؤس الرابع (البابا المئة واثنين).
+          </p>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            كما تشير المصادر إلى أن العائلة المقدسة قد مرت أيضًا عبر حارة الروم،
+            حيث كنيسة العذراء المغيثة، وهي إحدى الكنائس القديمة التي تحتضن بئرًا
+            مقدسًا قيل إن العائلة المقدسة قد شربت من مائه، ومنذ ذلك الحين، ارتبط
+            هذا البئر بقدرات شفائية ومعجزات، مما جعله محط أنظار الباحثين عن
+            البركة والشفاء.
+          </p>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            إلى جانب ذلك، يُعتقد أن العائلة المقدسة توقفت في منطقة العزباوية،
+            التي كانت في ذلك الوقت مجرد حقول خضراء تحيط بها بئر ماء، وسُميت بهذا
+            الاسم نسبةً إلى كونها عزبة زراعية. وعلى الرغم من التغيرات العمرانية
+            التي شهدتها المنطقة، لا تزال كنيسة العزباوية قائمةً كواحدة من
+            المحطات التي تحمل في طياتها قصصًا خالدة من تلك الرحلة المباركة.
+          </p>
+        </div>
+        <!-- Area 4 -  Images -->
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              كنيسة العدرا العزباوية
+            </h6>
+            <a href="images/cairo-im/3.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/3.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              العدرا المغيثه حارة الروم
+            </h6>
+            <a href="images/cairo-im/4.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/4.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              العدرا حارة زويلة
+            </h6>
+            <a href="images/cairo-im/5.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/5.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Area 5 - Text -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-primary mb-4 text-center">
+            مصر القديمة
+          </h3>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            في قلب القاهرة، وبين أزقة تحمل عبق التاريخ، تمتد منطقة مصر القديمة
+            كأحد أهم المشاهد التي ارتبطت برحلة العائلة المقدسة. هنا، عند أطراف
+            رأس الدلتا، وجدت العائلة ملاذًا آمنًا بين أسوار بابليون العريق، حيث
+            عاش اليهود قديمًا واتخذوا هذه البقعة ملجأً لهم، فكانت المكان الأنسب
+            ليحتمي فيه الطفل يسوع وأمه مريم ويوسف النجار.
+          </p>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            في هذا الموضع الهادئ، اختبأت العائلة المقدسة في مغارة كنيسة القديسين
+            سرجيوس وواخس—المعروفة اليوم باسم كنيسة أبو سرجة. كانت المغارة صغيرة
+            الحجم، مستطيلة الشكل، وتنخفض نحو 21 قدمًا أسفل أرضية الكنيسة، بينما
+            تنخفض الكنيسة ذاتها بنحو 13 قدمًا عن مستوى الشارع. ومع أن المكان
+            بسيط، فقد ظل شاهدًا على لحظة إنسانية وروحية مؤثرة في مسار العائلة.
+          </p>
+          <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+            بُنيت الكنيسة على الطراز البازيليكي، وما تزال حتى اليوم إحدى أهم
+            الكنائس الأثرية في مصر القديمة، لكنها ليست وحدها في هذا المشهد
+            الغني؛ فهذه المنطقة تحتضن مجموعة رائعة من الكنائس والأديرة التي تعكس
+            تطور العمارة المسيحية على مدى قرون، ومنها:
+          </p>
+
+          <ul>
+            <li>
+              <strong
+                >الكنيسة المعلقة (كنيسة العذراء مريم والقديسة دميانة)</strong
+              >: أُقيمت فوق بوابتين من حصن بابليون، وكأنها معلّقة في الهواء.
+            </li>
+            <li>
+              <strong>كنيسة القديسة بربارة</strong>: تعود إلى القرنين الرابع
+              والخامس الميلادي، وتُعد جوهرة من جواهر العمارة القبطية.
+            </li>
+            <li>
+              <strong>كنيسة مارجرجس بقصر الشمع</strong>: تحمل عبقًا دينيًا خاصًا
+              وتُضيء جانبًا مهمًا من التراث الروحي للمنطقة.
+            </li>
+            <li>
+              <strong>كنيسة العذراء بقصرية الريحان</strong>: وُجدت قبل القرن
+              التاسع الميلادي ثم أعيد بناؤها في القرن الثامن عشر.
+            </li>
+            <li>
+              <strong>كنيسة أباكير ويوحنا</strong>: يُرجح أن تاريخها يعود إلى
+              القرنين السابع أو الثامن.
+            </li>
+            <li>
+              <strong>كنيسة العذراء ببابليون الدرج</strong>: تعود إلى القرن
+              العاشر أو الحادي عشر.
+            </li>
+            <li>
+              <strong>كنيسة الأمير تادرس المشرقي</strong>: من القرن العاشر
+              الميلادي.
+            </li>
+            <li>
+              <strong>كنيسة رئيس الملائكة ميخائيل (الملاك القبلي)</strong>:
+              بمنطقة رأس الخليج، ويُعتقد أنها من القرن العاشر أو الحادي عشر.
+            </li>
+            <li>
+              <strong>كنيسة مارجرجس للروم الأرثوذكس</strong>: ذات التصميم
+              الدائري المميز، تضم برجًا للأجراس بارتفاع 30 مترًا، شُيدت في القرن
+              العاشر أعلى أحد أبراج الحصن.
+            </li>
+            <li>
+              <strong>دير مارجرجس للراهبات</strong>: ذكره المؤرخ المقريزي في
+              القرن الخامس عشر.
+            </li>
+            <li>
+              <strong>المتحف القبطي</strong>: إحدى أثمن المؤسسات الثقافية، أسسه
+              مرقس سميكة باشا وافتُتح عام 1910.
+            </li>
+            <li>
+              <strong>معبد ابن عزرا اليهودي</strong>: كان في الأصل كنيسة باسم
+              الملاك ميخائيل قبل بيعه لليهود لسداد الضرائب.
+            </li>
+          </ul>
+          <p class="text-xl text-gray-700 m-4 leading-relaxed">
+            كل جزء من هذه المنطقة يحكي قصة، وكل حجر فيها يشهد على عبور حضارات
+            وإيمان وشعب عاش فترات عصيبة ومضيئة. وبفضل ارتباطها برحلة العائلة
+            المقدسة، أصبحت مصر القديمة واحدة من أهم الوجهات الدينية والتاريخية،
+            حيث يتجلى فيها التاريخ كأنفاس حية تعيش بين الكنائس والممرات العتيقة.
+          </p>
+        </div>
+        <!-- Area 5 -  Images -->
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              • الكنيسة المعلقة
+            </h6>
+            <a href="images/cairo-im/6.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/6.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              • كنيسة القديسة بربارة
+            </h6>
+            <a href="images/cairo-im/7.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/7.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              • القديس سيرجيوس وواخس
+            </h6>
+            <a href="images/cairo-im/8.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/8.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:flex-row items-center mb-20 lg:mb-16 fade-in"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              •العدرا و مارجرجس
+            </h6>
+            <a href="images/cairo-im/9.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/9.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              •كنيسة العدرا قصرية الريحان
+            </h6>
+            <a href="images/cairo-im/11.jpg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/11.jpg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h6 class="font-bold text-primary mb-1 text-center">
+              • دير مارجرجس
+            </h6>
+            <a href="images/cairo-im/10.jpeg" data-lightbox="myGallery">
+              <img
+                src="images/cairo-im/10.jpeg"
+                alt=""
+                class="area-image mx-auto"
+                data-lightbox="myGallery"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Area 6 -  Image, Left Text -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-primary mb-4 text-center">
+            المعادي
+          </h3>
+          <p class="text-xl text-gray-700 m-4 leading-relaxed">
+            توجهت العائلة المقدسة بعد مغادرتها مصر القديمة جنوبًا حتى وصلت إلى
+            ضفة النيل الشرقية في منطقة المعادي، حيث توقفوا لحظة استراحة قبل أن
+            يشرعوا في المرحلة التالية من رحلتهم نحو الصعيد. هناك، اختاروا شاطئ
+            النيل ليقلّهم مركبٌ شراعي، وكأن مياه النيل الخالدة في تلك اللحظة
+            حملت على أمواجها بركة تلك الزيارة ونسيمًا من الأمان والهداية.
+          </p>
+          <p class="text-xl text-gray-700 m-4 leading-relaxed">
+            تطلّ اليوم كنيسة العذراء بالمعادي مباشرة على مجرى النيل، وهي تعرف
+            أيضًا باسم كنيسة المرتوتي، من الكلمة الرومانية التي تعني "أم الله
+            الكلمة". تقف الكنيسة كصخرة ثابتة في الزمن، تحمل في جدرانها طبقات من
+            التاريخ والإيمان. وقد نقلها مؤرخو الكنيسة مثل موهوب بن منصور بن مفرج
+            السكندري وأبو المكارم سعد الله، حيث أشاروا إلى مرور العائلة المقدسة
+            بهذه البقعة. ووفقاً للقديس برسوم العريان، توجد داخل الكنيسة عتبة
+            مقدّسة يتبرّك بها الزوار حتى اليوم، كأنها تلامس بصمت حذاء الطفل
+            يسوع.
+          </p>
+          <p class="text-xl text-gray-700 m-4 leading-relaxed">
+            أمّا السُلم الحجري الذي يمتد نحو النيل، فهو شاهد صامت على تلك اللحظة
+            التي أقلّوا فيها قاربهم، يربط بين الأرض والماء، بين الماضي والحاضر.
+            ولا تزال الكنيسة تحتفظ بذكرى حدث فريد: في يوم الجمعة الموافق 12 مارس
+            1976، وُجدت نسخة كبيرة من الكتاب المقدس أمام باب الكنيسة مطوية عند
+            صفحة الآية «مبارك شعبي مصر» من إنجيل إشعياء (19:25)، فاحتُفظت داخل
+            صندوق زجاجي عند المدخل الغربي تذكارًا لهذه البركة التي اجتاحت
+            المكان.
+          </p>
+          <p class="text-xl text-gray-700 m-4 leading-relaxed">
+            بهذا المشهد، تصبح المعادي أكثر من مجرد منطقة جغرافية؛ إنها محطة
+            تاريخية وروحية، حيث تلاقت مياه النيل مع نور السماء، وارتبطت الأرض
+            بلمسة إلهية جعلت من هذا الشاطئ بداية لرحلة جديدة نحو الجنوب، لكنها
+            بقيت في الذاكرة كعلامة للحضور المقدّس.
+          </p>
+        </div>
+        <div class="flex flex-col mb-20 lg:mb-16 fade-in">
+          <h6 class="font-bold text-primary mb-1 text-center">
+            • كنيسة العدرا المعادى
+          </h6>
+          <a href="images/cairo-im/12.jpeg" data-lightbox="myGallery">
+            <img
+              src="images/cairo-im/12.jpeg"
+              alt=""
+              class="area-image mx-auto"
+              data-lightbox="myGallery"
+            />
+          </a>
+        </div>
+      </div>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-primary text-white py-8">
@@ -143,5 +790,6 @@
     <!-- Carousel JavaScript -->
     <script src="scripts.js/carousel.js"></script>
     <script src="scripts.js/indexFunctions.js"></script>
+    <script src="./scripts.js/js/lightbox-plus-jquery.min.js"></script>
   </body>
 </html>

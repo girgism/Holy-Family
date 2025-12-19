@@ -106,3 +106,15 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+ul {
+  list-style-type: disc !important;
+  font-size: large;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+strong {
+  color: #1a365d; /* Dark blue color */
+  font-weight: 700;
+}
