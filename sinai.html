@@ -544,6 +544,75 @@
             </p>
           </div>
         </div>
+
+        <!-- Professional Gallery for Sinai Areas -->
+        <section id="gallery" class="rounded-3xl shadow-sm mt-16">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-primary mb-4">
+                معرض صور سيناء
+              </h2>
+              <p class="text-gray-600">
+                اكتشف جمال وعراقة المواقع المقدسة في شمال سيناء
+              </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div
+              class="flex flex-wrap justify-center gap-4 mb-10"
+              id="filter-buttons"
+            >
+              <button
+                class="filter-btn active px-6 py-2 rounded-full border-2 border-primary bg-primary text-white transition-all"
+                data-filter="all"
+              >
+                الكل
+              </button>
+              <button
+                class="filter-btn px-6 py-2 rounded-full border-2 border-primary text-primary hover:bg-primary/10 transition-all"
+                data-filter="rafah"
+              >
+                رفح
+              </button>
+              <button
+                class="filter-btn px-6 py-2 rounded-full border-2 border-primary text-primary hover:bg-primary/10 transition-all"
+                data-filter="sheikh-zuwayid"
+              >
+                الشيخ زويد
+              </button>
+              <button
+                class="filter-btn px-6 py-2 rounded-full border-2 border-primary text-primary hover:bg-primary/10 transition-all"
+                data-filter="arish"
+              >
+                العريش
+              </button>
+              <button
+                class="filter-btn px-6 py-2 rounded-full border-2 border-primary text-primary hover:bg-primary/10 transition-all"
+                data-filter="farama"
+              >
+                الفرما
+              </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+              id="gallery-grid"
+            >
+              <!-- Images will be rendered here by JS -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+              <button
+                id="load-more"
+                class="bg-secondary hover:bg-primary text-white px-10 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                عرض المزيد من الصور
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   </body>
@@ -560,4 +629,21 @@
   <script src="scripts.js/carousel.js"></script>
   <script src="scripts.js/indexFunctions.js"></script>
   <script src="./scripts.js/js/lightbox-plus-jquery.min.js"></script>
+  <script src="./scripts.js/sinai-gallery.js"></script>
+
+  <style>
+    .gallery-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease-out;
+    }
+    .gallery-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .filter-btn.active {
+      background-color: var(--color-primary);
+      color: #d40c0c;
+    }
+  </style>
 </html>
