@@ -804,6 +804,84 @@
             </a>
           </div>
         </div>
+        <!-- Professional Gallery Section -->
+        <section
+          id="area-gallery"
+          class="mt-24 mb-16 border-t border-gray-200 pt-16"
+        >
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-primary mb-4">
+              معرض صور الصعيد
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+              استكشف المعالم التاريخية والروحية التي مرت بها العائلة المقدسة في
+              صعيد مصر.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-wrap justify-center gap-3 mb-12"
+            id="gallery-filters"
+          >
+            <button
+              class="filter-btn active px-6 py-2.5 rounded-full border-2 border-primary bg-primary text-white font-bold transition-all"
+              data-category="all"
+            >
+              الكل
+            </button>
+            <button
+              class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-200 text-gray-600 font-bold hover:border-primary hover:text-primary transition-all"
+              data-category="jabal-al-tayr"
+            >
+              جبل الطير
+            </button>
+            <button
+              class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-200 text-gray-600 font-bold hover:border-primary hover:text-primary transition-all"
+              data-category="ashmounin"
+            >
+              الأشمونين
+            </button>
+            <button
+              class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-200 text-gray-600 font-bold hover:border-primary hover:text-primary transition-all"
+              data-category="al-muharraq"
+            >
+              دير المحرق
+            </button>
+            <button
+              class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-200 text-gray-600 font-bold hover:border-primary hover:text-primary transition-all"
+              data-category="dronka"
+            >
+              العدرا درنكه
+            </button>
+            <button
+              class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-200 text-gray-600 font-bold hover:border-primary hover:text-primary transition-all"
+              data-category="anba-srabamon"
+            >
+              دير الانبا صرابامون
+            </button>
+            <button
+              class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-200 text-gray-600 font-bold hover:border-primary hover:text-primary transition-all"
+              data-category="historical"
+            >
+              المناطق التاريخية
+            </button>
+          </div>
+
+          <div
+            id="pro-gallery-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          ></div>
+
+          <div class="text-center mt-16" id="load-more-container">
+            <button
+              id="btn-load-more"
+              class="inline-flex items-center gap-2 bg-primary text-white px-10 py-4 rounded-xl font-bold hover:bg-secondary transition-all shadow-xl hover:-translate-y-1"
+            >
+              <span>عرض المزيد من الصور</span>
+              <i class="fas fa-plus-circle"></i>
+            </button>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -820,5 +898,6 @@
     <script src="scripts.js/carousel.js"></script>
     <script src="scripts.js/indexFunctions.js"></script>
     <script src="./scripts.js/js/lightbox-plus-jquery.min.js"></script>
+    <script src="./scripts.js/upper-egypt.js"></script>
   </body>
 </html>

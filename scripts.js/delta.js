@@ -1,60 +1,25 @@
-const churches = [
-    { id: 'adra-eza', name: 'العدرا العزباويه', count: 5, ext: 'jpg' },
-    { id: 'haret-rom', name: 'العدرا المغيثة حارة الروم ', count: 13, ext: 'jpg' },
-    { id: 'zewal', name: 'العدرا حارة زويل', count: 13, ext: 'jpg' },
-    
+const areas = [
+    { id: 'tal-basta', name: 'تل بسطة', count: 2, ext: 'jpg' },
+    { id: 'sagha', name: 'سخا', count: 12, ext: 'jpg' },
+    { id: 'prolos', name: 'البرلس', count: 7, ext: 'jpg' },
+    { id: 'samanoud', name: 'سمنود', count: 7, ext: 'jpg' },
+    { id: 'mhma', name: 'المحمة', count: 5, ext: 'jpg' },
+    { id: 'dgados', name: 'دقادوس', count: 4, ext: 'jpg' },
+    { id: 'blbas', name: 'بلبيس', count: 2, ext: 'jpeg' },
   ];
-
-  const oldEgyptAreas=[
-    { id: 'rehana', name: 'العدرا قصر الريحان', count: 5, ext: 'jpg' },
-    { id: 'adra-mrgerges', name: 'العدرا و مارجرجس', count: 7, ext: 'jpg' },
-    { id: 'serg-waghs', name: 'القديس سيرجيوس وواخس', count: 10, ext: 'jpg' },
-    { id: 'barababa', name: 'القديسه بربارة', count: 9, ext: 'jpg' },
-    { id: 'moalaka', name: 'المعلقه', count: 11, ext: 'jpg' },
-    { id: 'der-mrgerges', name: 'دير مارجرجس', count: 5, ext: 'jpg' },
-  ]
   
-  const cairoAreas=[
-    { id: 'zaton', name: 'العدرا الزيتون', count: 6, ext: 'jpg' },
-    { id: 'matareya', name: 'المطرية ', count: 2, ext: 'jpg' },
-    { id: 'maadi', name: 'المعادي', count: 7, ext: 'jpg' },
-  ]
   const galleryImages = [];
-
-  oldEgyptAreas.forEach(area => {
-      for(let i = 1; i <= area.count; i++) {
-        galleryImages.push({
-          id: galleryImages.length + 1,
-          cat: "old-egypt",
-          src: `images/cairo-im/gallery/old-egypt/${area.id}/${i}.${area.ext}`,
-          title: area.name
-        });
-      }
-    });
-
-    
-  cairoAreas.forEach(area => {
-      for(let i = 1; i <= area.count; i++) {
-        galleryImages.push({
-          id: galleryImages.length + 1,
-          cat: "cairo",
-          src: `images/cairo-im/gallery/cairo/${area.id}/${i}.${area.ext}`,
-          title: area.name
-        });
-      }
-    });
   
-  churches.forEach(area => {
+  areas.forEach(area => {
     for(let i = 1; i <= area.count; i++) {
       galleryImages.push({
         id: galleryImages.length + 1,
-        cat: churches,
-        src: `images/cairo-im/gallery/${area.id}/${i}.${area.ext}`,
+        cat: area.id,
+        src: `images/delta/gallery/${area.id}/${i}.${area.ext}`,
         title: area.name
       });
     }
   });
-
 
   const GALLERY_CONFIG = {
     initial: 12,
