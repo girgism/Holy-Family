@@ -27,11 +27,8 @@ body {
 }
 
 .hero-bg {
-  background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.4),
-      rgba(139, 69, 19, 0.3)
-    ),
+  background:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(139, 69, 19, 0.3)),
     url("../images/home.png");
   background-size: cover;
   background-position: center;
@@ -40,12 +37,9 @@ body {
 
 @media (max-width: 768px) {
   .hero-bg {
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.4),
-        rgba(139, 69, 19, 0.3)
-      ),
-      url("../images/home_mobile_view.png");
+    background:
+      linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(139, 69, 19, 0.3)),
+      url("../images/home_mobile_view0.jpg");
     height: 88.7%;
     background-size: cover;
     background-position: center;
